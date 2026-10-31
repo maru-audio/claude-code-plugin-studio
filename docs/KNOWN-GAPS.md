@@ -27,6 +27,8 @@ Found something else? Run `/studio-gap`.
 
 ## DEVX-061
 
+**Fixed in source, not released yet.** It reaches you with the `maruaudio` release after 0.0.7.
+
 **Published package omits the demo audio, so `module preview` and the levels suite crash**
 
 The commands that render a module's sound fail on every project created from the public package, because they read test audio that is not in the tarball.
@@ -39,6 +41,8 @@ The commands that render a module's sound fail on every project created from the
 **Workaround:** `--stimulus <wav>` works for levels; `node tools/make-test-signal.mjs` makes the audio. Nothing yet for `module preview`.
 
 ## DEVX-062
+
+**Fixed in source, not released yet.** It reaches you with the `maruaudio` release after 0.0.7.
 
 **Every native failure says `Run maru setup native`, which asks for a private package a public user cannot get**
 
@@ -78,6 +82,8 @@ A public user cannot learn whether their Processor will compile to WebAssembly o
 **Workaround:** None. Keep to restricted TypeScript rules, and check after a hosted build.
 
 ## DEVX-065
+
+**Fixed in source, not released yet.** It reaches you with the `maruaudio` release after 0.0.7.
 
 **`module pack` and `module build` refuse the default output after `module preview`**
 

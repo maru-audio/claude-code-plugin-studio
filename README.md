@@ -140,7 +140,7 @@ A passing test says nothing about how something sounds. So a story that changes 
 
 ## What works today
 
-Measured with `maruaudio@0.0.7` on macOS. See [docs/KNOWN-GAPS.md](docs/KNOWN-GAPS.md) for each item and its task, and run `npm run studio:validate` for your own machine.
+Measured with `maruaudio@0.0.7` on macOS. Fixes for DEVX-061, DEVX-062 and DEVX-065 are in source, and passed on a local candidate of the next release. See [docs/KNOWN-GAPS.md](docs/KNOWN-GAPS.md) for each item and its task, and run `npm run studio:validate` for your own machine.
 
 | Works | Result |
 | --- | --- |

@@ -287,7 +287,8 @@
         "setup",
         "native"
       ],
-      "gap": "DEVX-062"
+      "gap": "DEVX-062",
+      "okText": "Native plug-ins build on Maru when you publish"
     },
     {
       "id": "verify",
@@ -297,7 +298,7 @@
         "verify",
         "src/index.ts"
       ],
-      "gap": "DEVX-062"
+      "gap": "DEVX-063"
     },
     {
       "id": "plugin-build",
@@ -309,7 +310,7 @@
         "--format",
         "vst3"
       ],
-      "gap": "DEVX-062",
+      "gap": "DEVX-063",
       "timeoutSec": 300
     },
     {
