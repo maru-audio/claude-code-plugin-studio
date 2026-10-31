@@ -15,10 +15,19 @@ Check output against input level, per preset and across inputs. The audio versio
 
 ## Steps
 
-1. Run `npx maru module eval --suite levels`. Narrow with `--sweep <param>`, `--no-presets`, `--input-lufs -18` and `--max-seconds 2`.
-2. Compare each preset with the policy in `design/sound-bible.md`.
-3. Report numbers, not adjectives. Equal loudness does not replace listening.
-4. If the command fails, stop and use `/studio-gap`.
+1. Make test audio with `node tools/make-test-signal.mjs`.
+2. Run `npx maru module eval --suite levels --stimulus production/qa/signals/sine-440.wav`. Narrow with `--sweep <param>`, `--no-presets`, `--input-lufs -18` and `--max-seconds 2`. Try the other signals too; a tone alone misses a lot.
+3. Compare each preset with the policy in `design/sound-bible.md`.
+4. Report numbers, not adjectives. Equal loudness does not replace listening.
+5. If the command fails, stop and use `/studio-gap`.
+
+## Reading the numbers
+
+- Levels are output minus input in LU, at the nominal level (default -18 LUFS).
+- For an effect, unity at default is a good starting policy. Character effects may differ, but must do so on purpose.
+- Watch the transfer slope: above 1 means the module adds dynamics, and below 1 means it compresses.
+- Check true peak, as well as loudness.
+- The built-in test audio is missing from `maruaudio@0.0.7`, so pass `--stimulus`.
 
 ## Done when
 

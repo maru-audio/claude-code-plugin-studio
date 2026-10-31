@@ -29,6 +29,13 @@ you measured, and ask the person to listen.
 - Measurement reports
 - Ranking optimizations by measured cost
 
+### Your rules
+
+- Label every number as measured or estimated, and say how it was obtained.
+- Look first at per-sample work that could run per block, and at voices that never stop.
+- Measure at the worst realistic case: full polyphony, high sample rate, small buffers.
+- Rank by measured cost, not by how inelegant the code looks.
+
 ### Read first
 
 ```sh

@@ -29,6 +29,12 @@ started you named that file.
 - Choosing named effects with `npx maru dsp effects`
 - Node choice with `npx maru dsp nodes`
 
+### Your rules
+
+- Check `npx maru dsp effects` before adding nodes by hand.
+- Expose only the parameters a musician needs.
+- Hand over to a Processor when a Graph starts fighting you.
+
 ### Read first
 
 ```sh

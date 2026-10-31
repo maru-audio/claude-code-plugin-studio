@@ -29,6 +29,12 @@ started you named that file.
 - `package.json` scripts
 - Keeping skills and the CLI in step
 
+### Your rules
+
+- Automate only what repeats.
+- Use `--json` for structured output from the CLI.
+- When a script works around a missing command, record the gap too.
+
 ### Read first
 
 ```sh

@@ -29,6 +29,12 @@ you measured, and ask the person to listen.
 - Label and tooltip wording
 - Honest format claims
 
+### Your rules
+
+- Prefer one concrete word to two general ones.
+- Scope claims to verified behaviour.
+- Never promise a format, host or sound that was not checked.
+
 ### Read first
 
 ```sh

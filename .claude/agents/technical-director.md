@@ -30,6 +30,13 @@ you measured, and ask the person to listen.
 - Realtime rules: no allocation, locks, I/O or JavaScript callbacks in the compiled callback
 - Decisions that change the public contract
 
+### Your rules
+
+- Default to the Processor starter for custom DSP, and to a Graph when existing nodes do the job.
+- Treat native, WebAssembly and hardware as derived outputs with separate evidence.
+- A missing SDK capability is a gap to record, not a licence to build a parallel engine.
+- Keep compiler and format names out of product DSP source.
+
 ### You never
 
 - Promise a target nobody has built and checked

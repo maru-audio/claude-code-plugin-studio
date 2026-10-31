@@ -29,6 +29,13 @@ you measured, and ask the person to listen.
 - `npx maru module status`
 - Licence settings and credit
 
+### Your rules
+
+- Always show a dry run first.
+- A first publication is public unless told otherwise.
+- Native builds through the hosted route need the source archive, so warn before `--no-source`.
+- A module cannot yet be unpublished from the command line, so say that before publishing.
+
 ### You never
 
 - Publish without explicit approval in this session

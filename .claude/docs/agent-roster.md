@@ -15,11 +15,13 @@
 | `face-engineer` | sonnet | Implements the face in React from the UI kit, bound to parameters through the face contract. |
 | `generative-audio-specialist` | sonnet | Hosted audio generation, kits and audio-to-MIDI, running outside the realtime path. |
 | `graph-engineer` | sonnet | Graph modules: quick chains of existing SDK nodes, when no custom Processor is needed. |
+| `hardware-specialist` | sonnet | Pedal and hardware targets: board fit, projects, wiring and what a desktop result does not prove. |
 | `host-compat-engineer` | sonnet | Host and format compatibility: DAW behaviour, state recall, automation, sample rates and buffer sizes. |
 | `lead-dsp-engineer` | sonnet | Code-level DSP architecture, review standards and assigning DSP work to specialists. |
 | `localization-lead` | inherit | Face text and manual translation: string extraction, length limits, locale review. |
 | `maru-specialist` | sonnet | Authority on how Maru works: which public API, command or guide to use, and whether something is supported. |
 | `midi-engineer` | sonnet | MIDI and event modules: note transforms, sequencers, chord tools and event capacities. |
+| `modulation-engineer` | sonnet | Modulation: LFOs, envelopes, envelope followers, routing and control-rate decisions. |
 | `native-format-engineer` | sonnet | VST3, CLAP, AU, AAX and standalone builds, inspection and managed install. |
 | `parameter-designer` | sonnet | Parameter schema: names, ranges, tapers, units, defaults and parameter order. |
 | `performance-analyst` | sonnet | CPU, memory and latency measurements, and ranked optimization recommendations. |
@@ -33,10 +35,12 @@
 | `release-manager` | sonnet | Release pipeline: versions, signing readiness, publication and store metadata. |
 | `restricted-typescript-specialist` | sonnet | The Processor language: allowed Math, bounded loops, no allocation in process, compile failures. |
 | `sample-librarian` | sonnet | Samples, kits and banks: provenance, rights, mappings and generated takes. |
+| `sampler-engineer` | sonnet | Sample playback: zones, round robin, velocity layers, loops and streaming resources. |
 | `security-engineer` | sonnet | Supply chain, licence activation, credentials and what ships in a release. |
 | `sound-director` | inherit | Sonic identity: reference sounds, tonal character, gain staging policy, and what good means for this plugin. |
 | `technical-director` | opus | Highest technical authority: Graph versus Processor, target formats, performance strategy, technical risk across the module. |
 | `tools-programmer` | sonnet | Project scripts and studio tooling, including the validator. |
 | `ui-kit-specialist` | sonnet | UI kit components, props and theme, read through `npx maru guide props`. |
 | `ux-designer` | inherit | Interaction design: what is visible at rest, reveal on hover, reading order and first-use flow. |
+| `visualizer-engineer` | sonnet | Meters, scopes, curves and other readouts on the face, drawn from real module data. |
 | `voice-engineer` | sonnet | Instrument voices: oscillators, envelopes, polyphony, voice stealing, velocity and playability. |

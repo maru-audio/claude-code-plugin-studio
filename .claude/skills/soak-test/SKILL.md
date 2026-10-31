@@ -18,7 +18,17 @@ Long-running behaviour: hours of audio, automation, tails, memory, denormals.
 
 ## Output
 
-Write to `production/qa/soak.md`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
+Write to `production/qa/soak.md` using `.claude/docs/templates/soak-protocol.md`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
+
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `qa-lead`. |
 
 ## Done when
 

@@ -16,6 +16,16 @@ Onboarding doc for a new contributor or agent: project state, conventions and pr
 2. Write what matters for the given role.
 3. Link rather than repeat.
 
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `producer`. |
+
 ## Done when
 
 A short onboarding doc exists.

@@ -29,6 +29,13 @@ you measured, and ask the person to listen.
 - Recording seeds and settings
 - Rights on generated takes
 
+### Your rules
+
+- Ask before running a job, because it can cost money.
+- Record prompt, seed and settings for every take.
+- Models run beside the audio path, and never in the callback.
+- Check the rights on generated material before it ships.
+
 ### Read first
 
 ```sh

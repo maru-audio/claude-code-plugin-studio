@@ -12,6 +12,7 @@
 | `/settings` | View or change studio config: rigor, automation, targets, stage. |
 | `/studio-validate` | Run the validator: checks every command, flag and guide named in this studio against the installed CLI, then tries each capability on this project. Use after install or an upgrade, or to report what does not work. |
 | `/studio-gap` | Record something the studio or Maru could not do: a failing command, a missing capability or misleading documentation. Use when a tool fails or a skill hits a dead end. |
+| `/remix-module` | Start from an existing community or official module, keeping its credit and licence. |
 
 ## Product Design
 
@@ -25,6 +26,8 @@
 | `/design-review` | Reviews one design document for completeness, consistency, implementability and whether it can be tested. |
 | `/propagate-design-change` | Finds architecture decisions and stories made stale by a changed design document, and resolves each. |
 | `/consistency-check` | Check parameter names, ranges and units agree across the contract, face, presets, design documents and manual. |
+| `/competitor-review` | Review comparable plugins: what they do well, what people complain about, and where this one differs. |
+| `/modulation-design` | Design modulation: sources, targets, depth, rate, sync and what can be heard. |
 
 ## Sound & Visual Identity
 
@@ -35,6 +38,7 @@
 | `/asset-spec` | Specs for samples, impulse responses and images: format, rights, slot and, if generated, the prompt and seed. |
 | `/asset-audit` | Audit assets against the spec: orphans, missing rights, size and format. |
 | `/generate-sounds` | Generate audio, a kit or MIDI with hosted jobs. Asks first, since jobs can cost money. |
+| `/sampler-bank` | Make a sampler bank or playable kit from recordings, with mappings, presets and rights. |
 
 ## UX & Face
 
@@ -44,6 +48,7 @@
 | `/ux-review` | Validate a UX spec or the built face: accessibility, concision and agreement with the design. |
 | `/face-from-reference` | Build the face from a reference image inside this module: parameters first, then the face, DSP last. |
 | `/parameter-pass` | Design or change the parameter contract: names, ranges, tapers, defaults, order. |
+| `/visualizer` | Add a meter, scope or curve to the face, drawn from real module data. |
 
 ## Architecture
 
@@ -80,6 +85,7 @@
 | `/tech-debt` | Track and prioritize technical debt: TODOs, temporary labels, workarounds. |
 | `/gate-check` | Ready to advance between phases? Returns PASS, CONCERNS, NOT ASSESSED or FAIL with blockers. 'Can we move on?' |
 | `/security-audit` | Security review before publishing: dependencies, credentials, licence settings and source visibility. |
+| `/dsp-review` | Audio-specific review of DSP: stability, aliasing, zipper noise, denormals, DC, sample-rate independence, tails and reset. |
 
 ## QA & Testing
 
@@ -99,6 +105,10 @@
 | `/midi-test` | Test MIDI behaviour: note lifecycle, stuck notes, overlapping notes and capacity. |
 | `/skill-test` | Validate this studio's skills: structure, and every command, flag and guide they name. |
 | `/skill-improve` | Improve a skill through a test, fix and retest loop. |
+| `/latency-check` | Establish the module's latency, what it reports to hosts, and whether a mix control stays aligned. |
+| `/sample-rate-test` | Check behaviour at 44.1, 48, 96 and 192 kHz: tuning, time constants, filter behaviour. |
+| `/automation-test` | Test automation of every parameter: clicks, zipper noise and recall. |
+| `/in-daw-test` | Test in a real DAW: load, sound, automation, save and reopen. |
 
 ## Production
 
@@ -111,6 +121,7 @@
 | `/reverse-document` | Generate missing design or architecture docs from existing code. |
 | `/onboard` | Onboarding doc for a new contributor or agent: project state, conventions and priorities. |
 | `/localize` | Face and manual translation: find hardcoded strings, extract a table, check lengths. |
+| `/manual` | Write the plugin's manual: what it does, each parameter, first steps and honest support statements. |
 
 ## Creative
 
@@ -133,6 +144,11 @@
 | `/patch-notes` | Musician-facing notes from the changelog. |
 | `/hotfix` | Emergency fix outside the sprint, with a full record and a regression test. |
 | `/day-one-patch` | First patch after launch: known issues and the first feedback, with a rollback plan. |
+| `/module-page` | Prepare the module page: name, one-line promise, copy, screenshot, demo and licence. |
+| `/license-setup` | Set up paid activation and tester licences for a native plug-in. Asks first; it changes how the product works. |
+| `/marketplace-listing` | Prepare a free marketplace listing: validate, preview, and submit only with approval. |
+| `/compare-release` | Compare two releases before shipping: what changed, and could saved sessions sound different? |
+| `/hardware-target` | Check whether a module can run on a pedal or hardware board, and what that would take. |
 
 ## Team Orchestration
 

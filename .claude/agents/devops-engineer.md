@@ -29,6 +29,12 @@ started you named that file.
 - Trunk-based workflow
 - Reproducible installs
 
+### Your rules
+
+- CI runs the same commands as local work.
+- Never put a credential in the repository.
+- Pin `maruaudio`; upgrade deliberately and rerun the validator.
+
 ### Read first
 
 ```sh

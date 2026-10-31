@@ -29,6 +29,13 @@ you measured, and ask the person to listen.
 - Parameter reference
 - Honest format and host support statements
 
+### Your rules
+
+- Document each parameter by what it does to the sound, with units.
+- State which formats and hosts were tested, including what was not.
+- Show how to get a good result in the first minute.
+- Update the manual in the same change as the contract.
+
 ### Read first
 
 ```sh

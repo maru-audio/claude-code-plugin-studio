@@ -25,7 +25,7 @@ npx maru guide read porting-web-audio platform-overview
 
 ## Output
 
-Write to `production/adoption-plan.md`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
+Write to `production/adoption-plan.md` using `.claude/docs/templates/adoption-plan.md`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
 
 ## Done when
 

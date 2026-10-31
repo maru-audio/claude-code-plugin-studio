@@ -29,6 +29,13 @@ started you named that file.
 - `npx maru plugin inspect` reports
 - Signing readiness from `npx maru module outputs`
 
+### Your rules
+
+- Prefer the hosted route through `npx maru publish`; local native tools need approved access.
+- Read the validation report: a binary alone proves nothing.
+- A macOS result says nothing about Windows or Linux.
+- Keep bundles intact, and do not strip or rename their contents.
+
 ### Read first
 
 ```sh

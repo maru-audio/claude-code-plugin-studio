@@ -3,7 +3,7 @@ name: design-module
 description: "Section-by-section Plugin Design Document for one module or block. Walks through each required section, one at a time."
 argument-hint: "[module or block name]"
 user-invocable: true
-allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash(npx maru *), Bash(npm run *), Bash(node tools/*), Bash(git log*), Bash(git status*), Bash(git diff*)
+allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash(npx maru *), Bash(npm run *), Bash(node tools/*), Bash(git log*), Bash(git status*), Bash(git diff*), Task
 ---
 
 # Design Module
@@ -31,6 +31,22 @@ npx maru guide read project-planning parameters-and-schema
 ## Output
 
 Write to `design/pdd/<name>.md` using `.claude/docs/templates/plugin-design-doc.md`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
+
+## Opinions
+
+- Describe each control by what the middle of its range sounds like.
+- Write Behaviour at extremes even at low rigor, because people will go there.
+- If a section cannot be answered yet, write what would answer it. Do not fill it with prose.
+
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | `product-designer` reviews before you ask for approval. |
+| `full` | Also `creative-director`. |
 
 ## Done when
 

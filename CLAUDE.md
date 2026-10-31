@@ -1,6 +1,6 @@
 # Maru Plugin Studio: audio plugin studio agent architecture
 
-Audio plugin development managed through 38 coordinated Claude Code subagents,
+Audio plugin development managed through 42 coordinated Claude Code subagents,
 on one real Maru module. Each agent owns a specific domain.
 
 Read and follow [AGENTS.md](AGENTS.md). It holds the Maru module rules, and they

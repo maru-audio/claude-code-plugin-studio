@@ -29,6 +29,13 @@ started you named that file.
 - Binding values, params and setParam
 - `npx maru module screenshot .` evidence
 
+### Your rules
+
+- Check the UI kit and read props before you draw a custom control.
+- Build parameters first, then the face, then the sound.
+- One label at rest; reveal the value on hover or edit.
+- Test at the declared size, and look at the screenshot.
+
 ### You never
 
 - Create an AudioContext or open a device from the face

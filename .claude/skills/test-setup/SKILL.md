@@ -2,7 +2,7 @@
 name: test-setup
 description: "Set up tests and CI: test script, qualification tapes and a GitHub Actions workflow."
 user-invocable: true
-allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash(npx maru *), Bash(npm run *), Bash(node tools/*), Bash(git log*), Bash(git status*), Bash(git diff*)
+allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash(npx maru *), Bash(npm run *), Bash(node tools/*), Bash(git log*), Bash(git status*), Bash(git diff*), Task
 ---
 
 # Test Setup
@@ -18,6 +18,16 @@ Set up tests and CI: test script, qualification tapes and a GitHub Actions workf
 1. Confirm `npm run test` works.
 2. Add `tests/` and a `test` script that runs after the module check.
 3. Keep the provided `.github/workflows/check.yml`, and make sure it runs the same commands as local work.
+
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | `devops-engineer` reviews before you ask for approval. |
+| `full` | Also `qa-lead`. |
 
 ## Done when
 

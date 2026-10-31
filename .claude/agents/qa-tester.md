@@ -29,6 +29,13 @@ started you named that file.
 - Bug reports
 - `src/qualification.ts` input and event tapes
 
+### Your rules
+
+- Always try silence, full scale, DC and an impulse.
+- Move every control to both ends, during audio.
+- Switch presets while audio is playing.
+- Write exact steps, with preset, sample rate and host.
+
 ### Read first
 
 ```sh

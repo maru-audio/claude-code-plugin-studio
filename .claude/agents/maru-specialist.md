@@ -29,6 +29,13 @@ you measured, and ask the person to listen.
 - Reading `npx maru tools describe --json`
 - Saying when something is not available
 
+### Your rules
+
+- Answer from `npx maru <group> --help` and guides, never from memory.
+- Say which version you checked.
+- Separate public behaviour from what a repository checkout can do.
+- If a command is advertised but unavailable, quote it and record the gap.
+
 ### Read first
 
 ```sh

@@ -15,6 +15,16 @@ Generate a changelog from git commits and stories.
 2. Group changes by what a musician notices.
 3. Write `CHANGELOG.md`.
 
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `release-manager`. |
+
 ## Done when
 
 `CHANGELOG.md` is updated.

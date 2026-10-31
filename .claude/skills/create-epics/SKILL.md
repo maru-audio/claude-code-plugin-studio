@@ -19,6 +19,16 @@ Turn the design and architecture into epics, one per module area.
 
 Write to `production/epics/`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
 
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `producer`. |
+
 ## Done when
 
 Epics exist and are ordered by risk.

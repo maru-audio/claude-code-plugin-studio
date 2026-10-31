@@ -30,6 +30,13 @@ you measured, and ask the person to listen.
 - What the plugin deliberately does not do
 - Competitive references
 
+### Your rules
+
+- Five controls that feel immediate beat twenty that need a manual.
+- Name each control for what a musician hears, not for the algorithm behind it.
+- Design the default state first: it is the plugin's first impression.
+- Decide what happens at each control's extremes, because people will go there.
+
 ### Read first
 
 ```sh

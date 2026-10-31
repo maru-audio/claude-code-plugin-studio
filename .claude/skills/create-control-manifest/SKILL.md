@@ -19,6 +19,16 @@ Build a short must-do and never-do list for this module from accepted ADRs.
 
 Write to `docs/architecture/control-manifest.md`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
 
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `technical-director`. |
+
 ## Done when
 
 `docs/architecture/control-manifest.md` exists and fits on one screen.

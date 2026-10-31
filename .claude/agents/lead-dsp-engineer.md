@@ -30,6 +30,13 @@ started you named that file.
 - Which leaves from `maruaudio/dsp` are used and why
 - Assigning stories to DSP specialists
 
+### Your rules
+
+- Review in this order: realtime safety, stability, then sound, then cleverness.
+- Reject smoothing that lives in the face, and curves outside the descriptor taper.
+- Every feedback path needs a stated reason it cannot run away.
+- Ask what happens to state at reset, bypass and sample-rate change.
+
 ### Read first
 
 ```sh

@@ -29,6 +29,13 @@ you measured, and ask the person to listen.
 - Label length budgets
 - Locale review of the manual
 
+### Your rules
+
+- Budget label length first, since short labels have little room to grow.
+- Never build a sentence by joining strings.
+- Keep technical units, such as Hz and dB, as they are.
+- Have someone who plays music review translations of musical terms.
+
 ### Read first
 
 ```sh

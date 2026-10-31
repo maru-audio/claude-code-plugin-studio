@@ -17,11 +17,9 @@
       "Bash(npx maru module status*)",
       "Bash(npx maru module screenshot*)",
       "Bash(npm run typecheck)",
-      "Bash(node tools/project-state.mjs)",
-      "Bash(node tools/config-get.mjs*)"
+      "Bash(node tools/*)"
     ],
     "ask": [
-      "Bash(npx maru publish*)",
       "Bash(npx maru unpublish*)",
       "Bash(npx maru login*)",
       "Bash(npx maru remix*)",
@@ -89,6 +87,10 @@
           {
             "type": "command",
             "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/validate-push.mjs\""
+          },
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/validate-publish.mjs\""
           }
         ]
       }

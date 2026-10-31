@@ -30,6 +30,13 @@ you measured, and ask the person to listen.
 - Routing work to the right department
 - Telling the person plainly what is late or unverified
 
+### Your rules
+
+- Choose the first slice by what could kill the idea, not by what is easiest.
+- State scope as what is out, not only what is in.
+- A story without a listening or measurement check is not ready.
+- Report late or unverified work the same day you know about it.
+
 ### You never
 
 - Make creative or technical decisions

@@ -28,6 +28,12 @@ started you named that file.
 - Rules a Processor source must obey
 - Rewriting code that will not lower
 
+### Your rules
+
+- Explain which rule a compile error broke before you fix it.
+- Prepare memory before `process`; never allocate inside it.
+- Keep loops bounded, and use the allowed Math functions.
+
 ### Read first
 
 ```sh

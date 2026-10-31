@@ -16,9 +16,15 @@ Guides a first-time user through onboarding and picks the right workflow. Use wh
 3. If `git remote -v` still points at the template, say so: a push would go to the template repository.
 4. Ask where the person is: **A** no idea yet, **B** a vague idea, **C** a clear idea, **D** existing work or a module to remix.
 5. Ask what they want to make: effect, instrument, MIDI tool, or sample kit. The template starts as an effect; for the others name the matching `npx maru init <dir> --from <starter>`.
-6. Ask `modes.rigor`: `minimal` (default), `standard` or `full`. Explain it in one sentence each, then write it with `node tools/config-set.mjs modes.rigor <value>` after a yes.
-7. Say plainly what this machine can and cannot do, from `npx maru doctor`. Native plug-in builds may be unavailable; if so, say the result will be a browser-playable module.
-8. Name one next step and stop: A or B → `/brainstorm`; C → `/quick-design` or `/design-module`; D → `/adopt`.
+6. Ask the plugin's name, then give the copy its identity with `node tools/rename-project.mjs "Name" com.yourname.plugin`. Do this before any publishing, because the id becomes permanent.
+7. Ask `modes.rigor`: `minimal` (default), `standard` or `full`. Explain it in one sentence each, then write it with `node tools/config-set.mjs modes.rigor <value>` after a yes.
+8. Say plainly what this machine can and cannot do, from `npx maru doctor`. Native plug-in builds may be unavailable; if so, say the result will be a browser-playable module.
+9. Name one next step and stop: A or B → `/brainstorm`; C → `/quick-design` or `/design-module`; D → `/adopt`.
+
+## Opinions
+
+- The goal of this skill is to get someone making sound quickly. Do not explain the hierarchy unless asked.
+- Default to `minimal`. Raising rigor later is one command, and the upstream project's own test found that more documents did not produce a better result.
 
 ## Done when
 

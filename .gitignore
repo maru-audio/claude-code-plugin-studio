@@ -14,3 +14,4 @@ dist/
 studio.local.json
 production/session-logs/
 production/session-state/
+production/qa/signals/

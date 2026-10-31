@@ -19,6 +19,16 @@ Lightweight spec for small changes: a tuning adjustment or one new control. Skip
 
 Write to `production/stories/`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
 
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `creative-director`. |
+
 ## Done when
 
 A small spec exists inside a story, with an acceptance test someone can hear or measure.

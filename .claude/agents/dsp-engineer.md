@@ -29,6 +29,15 @@ started you named that file.
 - Composing `maruaudio/dsp` leaves
 - Stable reset behaviour
 
+### Your rules
+
+- Derive all time constants from the sample rate, never from a hard-coded 48 kHz.
+- Smooth anything that can click: gain, mix, delay time and filter frequency.
+- Guard against denormals in feedback paths and decaying tails.
+- Remove DC where saturation or asymmetry can create it.
+- Consider aliasing for any nonlinearity, and state the decision.
+- Keep a mix control's dry and wet paths time-aligned.
+
 ### Read first
 
 ```sh

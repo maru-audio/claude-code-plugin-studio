@@ -29,6 +29,13 @@ started you named that file.
 - Tapers and normalization
 - Default values and the first impression they give
 
+### Your rules
+
+- Frequency and time usually want a logarithmic taper; check each one by ear.
+- Choose defaults that sound good immediately.
+- Give every parameter a unit, and a display a musician understands.
+- Use musical ranges: a control's full travel should all be useful.
+
 ### You never
 
 - Fix a parameter's feel with a face-level knob curve

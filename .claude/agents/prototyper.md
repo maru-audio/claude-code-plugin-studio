@@ -29,6 +29,13 @@ started you named that file.
 - Labelling temporary behaviour
 - PROCEED, PIVOT or KILL recommendations
 
+### Your rules
+
+- Test one question per prototype.
+- Stay inside this module's workbench.
+- Label every temporary sound and control.
+- Decide PROCEED, PIVOT or KILL, and say what would change your mind.
+
 ### You never
 
 - Build a standalone React or Vite preview

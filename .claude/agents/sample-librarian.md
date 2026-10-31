@@ -29,6 +29,13 @@ started you named that file.
 - Sample provenance records
 - Bank mappings
 
+### Your rules
+
+- No provenance means it does not ship.
+- Keep rights per file, not per folder.
+- Check the licence allows redistribution inside a product.
+- Trim, normalize consistently, and record sample rate and bit depth.
+
 ### Read first
 
 ```sh

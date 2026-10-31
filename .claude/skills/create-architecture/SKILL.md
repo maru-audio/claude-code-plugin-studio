@@ -2,7 +2,7 @@
 name: create-architecture
 description: "Author the technical plan before code: owner, starter, Graph or Processor, DSP candidates, wiring, prerequisites and verification order."
 user-invocable: true
-allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash(npx maru *), Bash(npm run *), Bash(node tools/*), Bash(git log*), Bash(git status*), Bash(git diff*)
+allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash(npx maru *), Bash(npm run *), Bash(node tools/*), Bash(git log*), Bash(git status*), Bash(git diff*), Task
 ---
 
 # Create Architecture
@@ -29,7 +29,17 @@ npx maru guide read project-planning processor-authoring
 
 ## Output
 
-Write to `docs/architecture/plan.md`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
+Write to `docs/architecture/plan.md` using `.claude/docs/templates/technical-plan.md`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
+
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | `technical-director` reviews before you ask for approval. |
+| `full` | Also `technical-director`. |
 
 ## Done when
 

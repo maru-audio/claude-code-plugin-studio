@@ -17,7 +17,17 @@ Sprint or milestone retrospective with actions for next time.
 
 ## Output
 
-Write to `production/retros/`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
+Write to `production/retros/` using `.claude/docs/templates/retrospective.md`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
+
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `producer`. |
 
 ## Done when
 

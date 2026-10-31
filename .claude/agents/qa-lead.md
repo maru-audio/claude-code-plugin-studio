@@ -30,6 +30,13 @@ you measured, and ask the person to listen.
 - The release gate list
 - Separating what passed from what was not run
 
+### Your rules
+
+- Severity follows harm to a musician: loud clicks, NaN output and lost sessions are critical.
+- Keep measured, listened and not tested as three separate lists.
+- A check that could not run is reported as not run, and never as passed.
+- Retest with the release candidate, not an earlier build.
+
 ### Read first
 
 ```sh

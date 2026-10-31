@@ -8,7 +8,8 @@
    "adopt",
    "settings",
    "studio-validate",
-   "studio-gap"
+   "studio-gap",
+   "remix-module"
   ],
   "Product Design": [
    "brainstorm",
@@ -18,20 +19,24 @@
    "review-all-designs",
    "design-review",
    "propagate-design-change",
-   "consistency-check"
+   "consistency-check",
+   "competitor-review",
+   "modulation-design"
   ],
   "Sound & Visual Identity": [
    "sound-bible",
    "face-bible",
    "asset-spec",
    "asset-audit",
-   "generate-sounds"
+   "generate-sounds",
+   "sampler-bank"
   ],
   "UX & Face": [
    "ux-design",
    "ux-review",
    "face-from-reference",
-   "parameter-pass"
+   "parameter-pass",
+   "visualizer"
   ],
   "Architecture": [
    "create-architecture",
@@ -58,7 +63,8 @@
    "perf-profile",
    "tech-debt",
    "gate-check",
-   "security-audit"
+   "security-audit",
+   "dsp-review"
   ],
   "QA & Testing": [
    "qa-plan",
@@ -74,7 +80,11 @@
    "state-recall",
    "midi-test",
    "skill-test",
-   "skill-improve"
+   "skill-improve",
+   "latency-check",
+   "sample-rate-test",
+   "automation-test",
+   "in-daw-test"
   ],
   "Production": [
    "milestone-review",
@@ -83,7 +93,8 @@
    "bug-triage",
    "reverse-document",
    "onboard",
-   "localize"
+   "localize",
+   "manual"
   ],
   "Creative": [
    "prototype",
@@ -99,7 +110,12 @@
    "changelog",
    "patch-notes",
    "hotfix",
-   "day-one-patch"
+   "day-one-patch",
+   "module-page",
+   "license-setup",
+   "marketplace-listing",
+   "compare-release",
+   "hardware-target"
   ],
   "Team Orchestration": [
    "team-effect",
@@ -705,6 +721,118 @@
    "group": "Team Orchestration",
    "desc": "Orchestrate the launch team: release-manager, copywriter, docs-lead, community-manager, demo-producer. Coordinates several agents on one feature.",
    "gaps": []
+  },
+  {
+   "name": "competitor-review",
+   "group": "Product Design",
+   "desc": "Review comparable plugins: what they do well, what people complain about, and where this one differs.",
+   "gaps": []
+  },
+  {
+   "name": "modulation-design",
+   "group": "Product Design",
+   "desc": "Design modulation: sources, targets, depth, rate, sync and what can be heard.",
+   "gaps": []
+  },
+  {
+   "name": "remix-module",
+   "group": "Onboarding & Navigation",
+   "desc": "Start from an existing community or official module, keeping its credit and licence.",
+   "gaps": [
+    "DEVX-076"
+   ]
+  },
+  {
+   "name": "sampler-bank",
+   "group": "Sound & Visual Identity",
+   "desc": "Make a sampler bank or playable kit from recordings, with mappings, presets and rights.",
+   "gaps": []
+  },
+  {
+   "name": "visualizer",
+   "group": "UX & Face",
+   "desc": "Add a meter, scope or curve to the face, drawn from real module data.",
+   "gaps": []
+  },
+  {
+   "name": "dsp-review",
+   "group": "Reviews & Analysis",
+   "desc": "Audio-specific review of DSP: stability, aliasing, zipper noise, denormals, DC, sample-rate independence, tails and reset.",
+   "gaps": [
+    "DEVX-070",
+    "DEVX-071"
+   ]
+  },
+  {
+   "name": "latency-check",
+   "group": "QA & Testing",
+   "desc": "Establish the module's latency, what it reports to hosts, and whether a mix control stays aligned.",
+   "gaps": [
+    "DEVX-071"
+   ]
+  },
+  {
+   "name": "sample-rate-test",
+   "group": "QA & Testing",
+   "desc": "Check behaviour at 44.1, 48, 96 and 192 kHz: tuning, time constants, filter behaviour.",
+   "gaps": [
+    "DEVX-072"
+   ]
+  },
+  {
+   "name": "automation-test",
+   "group": "QA & Testing",
+   "desc": "Test automation of every parameter: clicks, zipper noise and recall.",
+   "gaps": [
+    "DEVX-072"
+   ]
+  },
+  {
+   "name": "in-daw-test",
+   "group": "QA & Testing",
+   "desc": "Test in a real DAW: load, sound, automation, save and reopen.",
+   "gaps": [
+    "DEVX-063",
+    "DEVX-075"
+   ]
+  },
+  {
+   "name": "manual",
+   "group": "Production",
+   "desc": "Write the plugin's manual: what it does, each parameter, first steps and honest support statements.",
+   "gaps": []
+  },
+  {
+   "name": "module-page",
+   "group": "Release",
+   "desc": "Prepare the module page: name, one-line promise, copy, screenshot, demo and licence.",
+   "gaps": []
+  },
+  {
+   "name": "license-setup",
+   "group": "Release",
+   "desc": "Set up paid activation and tester licences for a native plug-in. Asks first; it changes how the product works.",
+   "gaps": []
+  },
+  {
+   "name": "marketplace-listing",
+   "group": "Release",
+   "desc": "Prepare a free marketplace listing: validate, preview, and submit only with approval.",
+   "gaps": []
+  },
+  {
+   "name": "compare-release",
+   "group": "Release",
+   "desc": "Compare two releases before shipping: what changed, and could saved sessions sound different?",
+   "gaps": []
+  },
+  {
+   "name": "hardware-target",
+   "group": "Release",
+   "desc": "Check whether a module can run on a pedal or hardware board, and what that would take.",
+   "gaps": [
+    "DEVX-075"
+   ]
   }
  ]
 }

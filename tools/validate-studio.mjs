@@ -214,7 +214,7 @@ async function runCapabilities() {
       const r = await run(cap, cwd)
       const status = classify(cap, r)
       console.log(`${status} (${(r.ms / 1000).toFixed(1)} s)`)
-      const lastLines = r.out.split("\n").map((l) => l.trim()).filter(Boolean).slice(-3).join(" | ").replaceAll(sandbox, "<project>").replaceAll(root, "<project>").slice(0, 300)
+      const lastLines = r.out.split("\n").map((l) => l.trim()).filter(Boolean).slice(-3).join(" | ").replaceAll(`/private${cwd}`, "<project>").replaceAll(cwd, "<project>").replaceAll(root, "<project>").slice(0, 300)
       results.push({ ...cap, status, ms: r.ms, code: r.code, evidence: lastLines })
       if (cap.fresh) rmSync(cwd, { recursive: true, force: true })
     }

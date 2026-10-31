@@ -29,6 +29,12 @@ you measured, and ask the person to listen.
 - Theme variables
 - Icon use from `maru-icons`
 
+### Your rules
+
+- Find the existing control first, with `npx maru guide props`.
+- Theme through CSS variables on the face's root.
+- Use `maru-icons` before drawing an icon.
+
 ### Read first
 
 ```sh

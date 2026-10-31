@@ -29,6 +29,13 @@ started you named that file.
 - Before and after material
 - Demo levels
 
+### Your rules
+
+- Show the dry signal first, so the effect is obvious.
+- Level-match before and after: louder is not better.
+- Render through the real module, without added processing, and say if anything else was used.
+- Use material you have the rights to.
+
 ### Read first
 
 ```sh

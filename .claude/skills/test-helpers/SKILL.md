@@ -15,6 +15,16 @@ Write project test helpers: tape builders, event builders and assertions.
 2. Write helpers in `tests/helpers/` for tones, impulses, silence and automation.
 3. Say what had to be written by hand, and record it with `/studio-gap` if it should ship in the SDK.
 
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `qa-lead`. |
+
 ## Done when
 
 Helpers exist, and anything the SDK should own is recorded.

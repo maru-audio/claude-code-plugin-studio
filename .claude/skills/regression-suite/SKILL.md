@@ -22,6 +22,16 @@ npx maru guide read parameters-and-schema
 3. Add input or event tapes to cover them.
 4. Run `npx maru module check . --tests`.
 
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `qa-lead`. |
+
 ## Done when
 
 Each fixed bug has a test or a stated reason.

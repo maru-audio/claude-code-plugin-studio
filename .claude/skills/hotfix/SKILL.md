@@ -18,6 +18,16 @@ Emergency fix outside the sprint, with a full record and a regression test.
 4. Run `npx maru module check .`.
 5. Run `/publish` for the new version after a yes.
 
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `release-manager`. |
+
 ## Done when
 
 The fix is in, with a test, and is published only after a yes.

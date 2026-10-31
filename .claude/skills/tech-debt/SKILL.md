@@ -19,6 +19,16 @@ Track and prioritize technical debt: TODOs, temporary labels, workarounds.
 
 Write to `production/tech-debt.md`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
 
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `technical-director`. |
+
 ## Done when
 
 The debt register is current.

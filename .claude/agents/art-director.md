@@ -30,6 +30,13 @@ you measured, and ask the person to listen.
 - Control style within the UI kit
 - Screenshot review against references
 
+### Your rules
+
+- Measure a reference before drawing from it: size, spacing, hierarchy.
+- Use square corners and neutral borders, and no coloured edge on a panel.
+- Prefer labels, type and spacing to boxes inside boxes.
+- A control's look must imply what it really does.
+
 ### Read first
 
 ```sh

@@ -29,6 +29,13 @@ you measured, and ask the person to listen.
 - `npx maru plugin verify-formats` results
 - State and automation recall evidence
 
+### Your rules
+
+- Test state recall by closing and reopening the session, not only by saving.
+- Test sample-rate and buffer-size changes during a session.
+- Check automation of every parameter, at speed.
+- Every matrix cell has a host version and a date, or says **not tested**.
+
 ### Read first
 
 ```sh

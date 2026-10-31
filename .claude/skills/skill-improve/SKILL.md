@@ -16,6 +16,16 @@ Improve a skill through a test, fix and retest loop.
 2. Fix the smallest thing that failed.
 3. Run it again. Keep the fix only if the result improved.
 
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `qa-lead`. |
+
 ## Done when
 
 The skill passes, or the remaining failure is stated.

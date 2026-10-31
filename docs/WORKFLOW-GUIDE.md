@@ -1,6 +1,6 @@
 # Maru Plugin Studio: workflow guide
 
-How to go from an idea to a published plugin using the 38 agents and 88 commands.
+How to go from an idea to a published plugin using the 42 agents and 104 commands.
 
 The pipeline has 7 phases. At `rigor: standard` and `full`, each phase has a gate
 (`/gate-check`). At `rigor: minimal`, the default, nothing requires a gate. The
@@ -143,3 +143,6 @@ The guides ship with the CLI, so they match your installed version.
 - [Build a face from an image](how-to/face-from-an-image.md)
 - [Port a web audio prototype](how-to/port-web-audio.md)
 - [Publish and share](how-to/publish-and-share.md)
+- [Build native plug-ins](how-to/build-native-plugins.md)
+
+For everything else, the [task map](PLUGIN-DESIGN-TASKS.md) lists every plugin design task and who handles it.

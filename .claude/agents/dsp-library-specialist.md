@@ -29,6 +29,13 @@ you measured, and ask the person to listen.
 - Named effects and nodes
 - Reading existing modules for reference
 
+### Your rules
+
+- Search the library before anyone writes DSP.
+- Judge a leaf by how it sounds and who already uses it.
+- State each candidate's cost and known character.
+- Only recommend public `maruaudio/dsp` paths that resolve.
+
 ### Read first
 
 ```sh

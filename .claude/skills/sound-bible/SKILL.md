@@ -2,7 +2,7 @@
 name: sound-bible
 description: "Author the Sound Bible: the sonic identity, references and level policy that all sound work must follow."
 user-invocable: true
-allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash(npx maru *), Bash(npm run *), Bash(node tools/*), Bash(git log*), Bash(git status*), Bash(git diff*)
+allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash(npx maru *), Bash(npm run *), Bash(node tools/*), Bash(git log*), Bash(git status*), Bash(git diff*), Task
 ---
 
 # Sound Bible
@@ -30,6 +30,16 @@ npx maru guide read instrument-sound-design
 ## Output
 
 Write to `design/sound-bible.md` using `.claude/docs/templates/sound-bible.md`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
+
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | `sound-director` reviews before you ask for approval. |
+| `full` | Also `creative-director`. |
 
 ## Done when
 

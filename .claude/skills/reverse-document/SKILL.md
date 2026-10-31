@@ -16,6 +16,16 @@ Generate missing design or architecture docs from existing code.
 2. Describe what exists, and mark inferred intent as inferred.
 3. Ask about anything unclear before writing.
 
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `producer`. |
+
 ## Done when
 
 Documents exist and inferences are marked.

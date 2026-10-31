@@ -29,6 +29,13 @@ started you named that file.
 - `maxEvents` capacities
 - Event tests
 
+### Your rules
+
+- Every note on needs a guaranteed note off, including on bypass and reset.
+- Handle all-notes-off, and channel and port limits.
+- Timestamp events by frame within the block.
+- State what happens when `maxEvents` is exceeded.
+
 ### Read first
 
 ```sh

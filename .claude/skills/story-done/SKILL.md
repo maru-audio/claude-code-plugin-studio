@@ -18,6 +18,22 @@ Close a finished story: verify each acceptance item and record deviations.
 4. Record deviations. Mark listening as done only if a person said so.
 5. Update its status, and suggest the next story.
 
+## Never close a story when
+
+- Only `--fast` ran.
+- The sound changed and no person has been asked to listen. You may close it with **listening: not done**, if you say so plainly.
+- A check was unavailable and was treated as passed.
+
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `producer`. |
+
 ## Done when
 
 The story is closed with evidence, or stays open with the reason.

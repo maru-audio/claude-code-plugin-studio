@@ -94,7 +94,7 @@ require another approval within the work the user already authorized.
 - Start from the musical result the user described. Ask only when missing
   information changes that goal or an important boundary; continue independent
   discovery while waiting.
-- Make focused edits. Never change the module `id`, and never hand-edit
+- Make focused edits. Never change the module `id` after first publish (`/start` sets it once, using `tools/rename-project.mjs`), and never hand-edit
   generated output (`build/`, `dist/`, `*.generated.ts`). A missing shared
   capability belongs in its framework owner, not in a local copy.
 - Let the user play and listen to the module while you work. Their listening
@@ -156,7 +156,7 @@ this file. An unavailable skill distribution does not remove access to CLI guide
 ### Project ownership
 
 This is a standalone Processor effect module project, not a framework checkout.
-Never change `id` as an incidental refactor: it is the assigned module identity.
+Never change `id` as an incidental refactor: it is the module's permanent identity from first publish.
 Keep declaration and package source-role metadata consistent.
 
 - `src/index.ts` exports `AUDIO_MODULE`, declares schema, ports and face, and is

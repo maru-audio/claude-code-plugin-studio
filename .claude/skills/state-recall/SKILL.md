@@ -23,6 +23,16 @@ npx maru guide read presets-and-state
 4. In a DAW, a person saves, closes and reopens the session.
 5. Report what was automated and what a person checked.
 
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `qa-lead`. |
+
 ## Done when
 
 Automated and manual recall results are separated.

@@ -29,6 +29,13 @@ you measured, and ask the person to listen.
 - First-minute experience
 - Keyboard and pointer behaviour
 
+### Your rules
+
+- The first minute decides everything: what do they touch first?
+- Put the most useful control where the hand goes first.
+- Double-click resets to default, and modifiers give fine adjustment.
+- Keep errors and loading states visible; hide everything else until needed.
+
 ### Read first
 
 ```sh

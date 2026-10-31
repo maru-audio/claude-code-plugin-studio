@@ -3,7 +3,7 @@
   <p align="center">
     Turn a single Claude Code session into a full audio plugin studio.
     <br />
-    38 agents. 88 skills. One coordinated AI team, on a real Maru module.
+    42 agents. 104 skills. One coordinated AI team, on a real Maru module.
   </p>
 </p>
 
@@ -15,7 +15,7 @@
 
 Making a plugin with AI is powerful, but a single chat session has no structure. Nobody stops you from shipping a preset that clips, skipping the listening test, or adding a twelfth knob. There is no QA pass, no sound review, no one asking "does this still do the one thing it promised?"
 
-**Maru Plugin Studio** gives your AI session the structure of a real plugin company. Instead of one general-purpose assistant, you get 38 specialized agents organized into a studio hierarchy: directors who guard the vision, department leads who own their domains, and specialists who do the hands-on work. Each agent has defined responsibilities, escalation paths and quality gates.
+**Maru Plugin Studio** gives your AI session the structure of a real plugin company. Instead of one general-purpose assistant, you get 42 specialized agents organized into a studio hierarchy: directors who guard the vision, department leads who own their domains, and specialists who do the hands-on work. Each agent has defined responsibilities, escalation paths and quality gates.
 
 The result: you still make every decision, and you are still the only one who can say how it sounds. But now you have a team that asks the right questions, catches mistakes early, and keeps your project organized from first idea to published release.
 
@@ -43,12 +43,13 @@ It is deliberately more opinionated than the [Maru agent skill](https://github.c
 | Category | Count | Description |
 | --- | --- | --- |
 | **Module** | 1 | A working Maru effect in `src/`, from the official blank starter |
-| **Agents** | 38 | Specialized subagents across product, DSP, face, sound, QA, release and Maru itself |
-| **Skills** | 88 | Slash commands for every phase (`/start`, `/design-module`, `/dev-story`, `/gain-staging`, `/publish`) |
-| **Hooks** | 14 | Automated checks on commits, pushes, face and DSP writes, large reads, assets and session lifecycle |
+| **Agents** | 42 | Specialized subagents across product, DSP, face, sound, QA, release and Maru itself |
+| **Skills** | 104 | Slash commands for every phase (`/start`, `/design-module`, `/dev-story`, `/gain-staging`, `/publish`) |
+| **Hooks** | 15 | Automated checks on commits, pushes, face and DSP writes, large reads, assets and session lifecycle |
 | **Rules** | 13 | Path-scoped standards for DSP, faces, the contract, presets, assets and more |
-| **Templates** | 15 | Briefs, design documents, ADRs, listening reports, host matrices, release checklists |
-| **How-to guides** | 7 | [Effect, instrument, MIDI tool, sample kit, face from an image, web audio port, publishing](docs/how-to/) |
+| **Templates** | 30 | Briefs, design documents, ADRs, listening reports, host matrices, release checklists |
+| **How-to guides** | 8 | [Effect, instrument, MIDI tool, sample kit, face from an image, web audio port, publishing, native builds](docs/how-to/) |
+| **Task map** | 1 | [Every plugin design task, with its skill, agent and status](docs/PLUGIN-DESIGN-TASKS.md) |
 | **Validator** | 1 | Checks every command this studio names against your installed CLI, then tries each capability |
 
 ## Studio Hierarchy
@@ -70,29 +71,31 @@ Tier 3: Specialists
   host-compat-engineer native-format-engineer devops-engineer
   security-engineer    qa-tester             accessibility-specialist
   community-manager    copywriter            tools-programmer
+  modulation-engineer  sampler-engineer      visualizer-engineer
 
   Maru specialists
   restricted-typescript-specialist           dsp-library-specialist
   ui-kit-specialist    generative-audio-specialist  publishing-specialist
+  hardware-specialist
 ```
 
-Each agent declares a model: the directors ask for Opus, most specialists name Sonnet, and the rest inherit your session's model.
+Each agent has its own role, area of ownership, rules and escalation path, and agents without a build job have no shell access. The directors ask for Opus, most specialists name Sonnet, and the rest inherit your session's model. Rules in `.claude/rules/` add a second layer: they load by file path, whichever agent is working. [The roster](.claude/docs/agent-roster.md) lists them all.
 
 ## Slash Commands
 
-Type `/` in Claude Code to access all 88 skills:
+Type `/` in Claude Code to access all 104 skills:
 
 **Onboarding & Navigation**
-`/start` `/help` `/project-stage-detect` `/setup-target` `/adopt` `/settings` `/studio-validate` `/studio-gap`
+`/start` `/help` `/project-stage-detect` `/setup-target` `/adopt` `/settings` `/studio-validate` `/studio-gap` `/remix-module`
 
 **Product Design**
-`/brainstorm` `/map-signal-flow` `/design-module` `/quick-design` `/review-all-designs` `/design-review` `/propagate-design-change` `/consistency-check`
+`/brainstorm` `/map-signal-flow` `/design-module` `/quick-design` `/review-all-designs` `/design-review` `/propagate-design-change` `/consistency-check` `/competitor-review` `/modulation-design`
 
 **Sound & Visual Identity**
-`/sound-bible` `/face-bible` `/asset-spec` `/asset-audit` `/generate-sounds`
+`/sound-bible` `/face-bible` `/asset-spec` `/asset-audit` `/generate-sounds` `/sampler-bank`
 
 **UX & Face**
-`/ux-design` `/ux-review` `/face-from-reference` `/parameter-pass`
+`/ux-design` `/ux-review` `/face-from-reference` `/parameter-pass` `/visualizer`
 
 **Architecture**
 `/create-architecture` `/architecture-decision` `/architecture-review` `/create-control-manifest`
@@ -101,19 +104,19 @@ Type `/` in Claude Code to access all 88 skills:
 `/create-epics` `/create-stories` `/story-readiness` `/dev-story` `/story-done` `/sprint-plan` `/sprint-status` `/estimate`
 
 **Reviews & Analysis**
-`/code-review` `/gain-staging` `/sound-compare` `/content-audit` `/scope-check` `/perf-profile` `/tech-debt` `/gate-check` `/security-audit`
+`/code-review` `/gain-staging` `/sound-compare` `/content-audit` `/scope-check` `/perf-profile` `/tech-debt` `/gate-check` `/security-audit` `/dsp-review`
 
 **QA & Testing**
-`/qa-plan` `/smoke-check` `/listening-test` `/soak-test` `/regression-suite` `/test-setup` `/test-helpers` `/test-evidence-review` `/test-flakiness` `/host-matrix` `/state-recall` `/midi-test` `/skill-test` `/skill-improve`
+`/qa-plan` `/smoke-check` `/listening-test` `/soak-test` `/regression-suite` `/test-setup` `/test-helpers` `/test-evidence-review` `/test-flakiness` `/host-matrix` `/state-recall` `/midi-test` `/skill-test` `/skill-improve` `/latency-check` `/sample-rate-test` `/automation-test` `/in-daw-test`
 
 **Production**
-`/milestone-review` `/retrospective` `/bug-report` `/bug-triage` `/reverse-document` `/onboard` `/localize`
+`/milestone-review` `/retrospective` `/bug-report` `/bug-triage` `/reverse-document` `/onboard` `/localize` `/manual`
 
 **Creative**
 `/prototype` `/vertical-slice` `/preset-pass` `/demo-pass`
 
 **Release**
-`/build-plugin` `/publish` `/release-checklist` `/launch-checklist` `/changelog` `/patch-notes` `/hotfix` `/day-one-patch`
+`/build-plugin` `/publish` `/release-checklist` `/launch-checklist` `/changelog` `/patch-notes` `/hotfix` `/day-one-patch` `/module-page` `/license-setup` `/marketplace-listing` `/compare-release` `/hardware-target`
 
 **Team Orchestration**
 `/team-effect` `/team-instrument` `/team-face` `/team-sound` `/team-presets` `/team-polish` `/team-qa` `/team-release` `/team-launch`
@@ -126,7 +129,7 @@ A fair question, and the answer should be a measurement. We owe that measurement
 
 ### It renders the plugin, and a person listens
 
-A passing test says nothing about how something sounds. So a story that changes the sound is not closed until it has been rendered, measured, and a person has been asked to listen in the workbench. Measured health and listening evidence are reported separately. **Not run** is a valid result. No agent may claim that something sounds good.
+A passing test says nothing about how something sounds. So a story that changes the sound is not closed until it has been rendered, measured, and a person has been asked to listen in the workbench. Measured health and listening evidence are reported separately. **Not run** is a valid result. A hook-free rule of this studio is that no agent may claim something sounds good.
 
 ## What works today
 
@@ -201,14 +204,14 @@ AGENTS.md                     # The Maru module rules, for any coding agent
 studio.config.json            # Stage, rigor, automation, targets
 .claude/
   settings.json               # Hooks, permissions, MARU_SILENT
-  agents/                     # 38 agent definitions
-  skills/                     # 88 slash commands
-  hooks/                      # 14 Node hooks and a helper
+  agents/                     # 42 agent definitions
+  skills/                     # 104 slash commands
+  hooks/                      # 15 Node hooks and a helper
   rules/                      # 13 path-scoped standards
   statusline.mjs              # Stage and rigor in the status line
   docs/
     workflow-catalog.json     # 7-phase pipeline (read by /help)
-    templates/                # 15 document templates
+    templates/                # 30 document templates
 src/                          # The module: entry, contract, DSP, face, presets, qualification
 assets/                       # Samples, impulse responses, images
 demos/                        # Demo audio rendered through the module
@@ -249,6 +252,7 @@ This is **not** an auto-pilot. Every agent follows the same protocol:
 | `validate-write.mjs` | Before Write/Edit | **Blocks** a face from using audio or device APIs, and a Processor from I/O |
 | `validate-commit.mjs` | Before `git commit` | **Blocks** a commit that changes the module if the fast check fails |
 | `validate-push.mjs` | Before `git push` | **Blocks** force pushes and pushes to the template repository |
+| `validate-publish.mjs` | Before `maru publish` | Lets a dry run through, and always asks before a real publish |
 | `validate-read.mjs` | Before Read | Refuses a whole-file read of a design document over 40 KB and lists its headings |
 | `validate-assets.mjs` | After Write/Edit | Notes an audio or image file with no rights entry |
 | `validate-skill-change.mjs` | After Write/Edit | Suggests `/skill-test` after a skill or agent changes |
@@ -260,7 +264,7 @@ This is **not** an auto-pilot. Every agent follows the same protocol:
 | `log-agent.mjs`, `log-agent-stop.mjs` | Agent starts and stops | Audit trail |
 | `notify.mjs` | Needs your attention | macOS notification |
 
-**Permission rules** in `settings.json` allow read-only Maru commands, and ask before `maru publish`, `unpublish`, `login`, `audio`, `marketplace`, `remix` and license changes. **`MARU_SILENT=1`** is set for every agent, so nothing reaches your speakers until you click **Unmute**.
+**Permission rules** in `settings.json` allow read-only Maru commands, and ask before `maru unpublish`, `login`, `audio`, `marketplace`, `remix` and license changes. **`MARU_SILENT=1`** is set for every agent, so nothing reaches your speakers until you click **Unmute**.
 
 ### Path-Scoped Rules
 

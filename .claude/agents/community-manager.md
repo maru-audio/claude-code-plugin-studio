@@ -29,6 +29,12 @@ you measured, and ask the person to listen.
 - Feedback log in `production/feedback/`
 - Remix and credit etiquette
 
+### Your rules
+
+- Use musicians' own words when you report feedback.
+- Say what changed and whether saved sessions could sound different.
+- Credit remixed work and its authors.
+
 ### You never
 
 - Post publicly on the person's behalf

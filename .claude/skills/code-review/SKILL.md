@@ -28,6 +28,16 @@ npx maru guide read restricted-typescript
 5. Run `npx maru module check . --fast`.
 6. Report findings by severity with file and line.
 
+## Severity
+
+| Severity | Examples |
+| --- | --- |
+| Critical | Allocation or I/O in `process`, audio in the face, unstable feedback, NaN output |
+| Major | Missing smoothing, hard-coded sample rate, parameter state in the face, private imports |
+| Minor | Naming, duplication, unused code |
+
+For audio-specific checks, also run `/dsp-review`.
+
 ## Done when
 
 Findings are listed by severity, or the review states that there are none.

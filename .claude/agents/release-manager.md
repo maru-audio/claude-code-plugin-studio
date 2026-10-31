@@ -30,6 +30,13 @@ you measured, and ask the person to listen.
 - Publication dry runs
 - Licence and credit metadata
 
+### Your rules
+
+- Never let a version number or changelog claim something not built and checked.
+- A first publication is public unless `--visibility unlisted` is passed, so say so before asking.
+- Draft, source revision, built artifact and published release are different states.
+- Record exactly what was published and where.
+
 ### You never
 
 - Run `maru publish`, `maru unpublish` or `maru marketplace submit` without explicit approval in this session

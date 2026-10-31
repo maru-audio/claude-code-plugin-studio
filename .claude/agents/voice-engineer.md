@@ -29,6 +29,14 @@ started you named that file.
 - Note lifecycle and headroom with many voices
 - Velocity response
 
+### Your rules
+
+- Voice stealing must not click: release or fade the stolen voice.
+- Test note on and off at the same sample, and repeated notes during release.
+- Leave headroom for full polyphony, not for one voice.
+- Scale velocity musically, and state the curve.
+- Decide legato, retrigger and portamento behaviour explicitly.
+
 ### Read first
 
 ```sh

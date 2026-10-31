@@ -23,7 +23,17 @@ npx maru guide read assets-and-resources generation-and-transcription
 
 ## Output
 
-Write to `design/assets.md`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
+Write to `design/assets.md` using `.claude/docs/templates/assets-register.md`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
+
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `creative-director`. |
 
 ## Done when
 

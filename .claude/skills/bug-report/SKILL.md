@@ -2,7 +2,7 @@
 name: bug-report
 description: "Structured bug report: what you did, what you heard, what you expected, and how to reproduce it."
 user-invocable: true
-allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash(npx maru *), Bash(npm run *), Bash(node tools/*), Bash(git log*), Bash(git status*), Bash(git diff*)
+allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash(npx maru *), Bash(npm run *), Bash(node tools/*), Bash(git log*), Bash(git status*), Bash(git diff*), Task
 ---
 
 # Bug Report
@@ -23,6 +23,16 @@ Structured bug report: what you did, what you heard, what you expected, and how 
 ## Output
 
 Write to `production/bugs/` using `.claude/docs/templates/bug.md`. Ask "May I write this to [filepath]?" first, unless `modes.automation` is `act`.
+
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | `qa-tester` reviews before you ask for approval. |
+| `full` | Also `producer`. |
 
 ## Done when
 

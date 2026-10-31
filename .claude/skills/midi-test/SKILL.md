@@ -22,6 +22,16 @@ npx maru guide read midi-and-event-modules
 3. Run `npx maru module check .`.
 4. Ask a person to play it in the workbench.
 
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `qa-lead`. |
+
 ## Done when
 
 Event tapes exist and results are reported.

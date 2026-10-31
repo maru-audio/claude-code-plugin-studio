@@ -30,6 +30,13 @@ you measured, and ask the person to listen.
 - Headroom and output level policy
 - Listening test scripts in `production/qa/listening/`
 
+### Your rules
+
+- Write listening questions that cannot be answered yes or no.
+- Compare at matched loudness, because louder usually wins.
+- Set headroom before designing presets.
+- Keep references to specific recordings and moments, not to a genre.
+
 ### Read first
 
 ```sh

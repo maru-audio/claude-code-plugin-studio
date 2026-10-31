@@ -3,7 +3,7 @@ name: face-from-reference
 description: "Build the face from a reference image inside this module: parameters first, then the face, DSP last."
 argument-hint: "[image path]"
 user-invocable: true
-allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash(npx maru *), Bash(npm run *), Bash(node tools/*), Bash(git log*), Bash(git status*), Bash(git diff*)
+allowed-tools: Read, Glob, Grep, Write, Edit, AskUserQuestion, Bash(npx maru *), Bash(npm run *), Bash(node tools/*), Bash(git log*), Bash(git status*), Bash(git diff*), Task
 ---
 
 # Face From Reference
@@ -27,6 +27,16 @@ npx maru guide read face-from-reference ui-kit-faces
 3. Build `src/ui/` from shared controls and bind every control.
 4. Run `npx maru module screenshot .` and put the capture next to the reference.
 5. Say where they still differ. Keep the temporary sound labelled as temporary.
+
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | `face-engineer` reviews before you ask for approval. |
+| `full` | Also `art-director`. |
 
 ## Done when
 

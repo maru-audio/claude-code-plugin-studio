@@ -16,6 +16,16 @@ First patch after launch: known issues and the first feedback, with a rollback p
 3. State how to go back: `npx maru unpublish --help` shows what is available today.
 4. Run `/publish` after a yes.
 
+## Review by rigor
+
+Read `modes.rigor` with `node tools/config-get.mjs`. See `.claude/docs/director-gates.md`.
+
+| Rigor | Review |
+| --- | --- |
+| `minimal` | None. Show the result to the person. |
+| `standard` | The department lead reviews before you ask for approval. |
+| `full` | Also `release-manager`. |
+
 ## Done when
 
 The patch is scoped and its rollback is stated.

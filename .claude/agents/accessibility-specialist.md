@@ -29,6 +29,13 @@ you measured, and ask the person to listen.
 - Contrast and text size
 - Accessible names on custom controls
 
+### Your rules
+
+- Every control is reachable and operable by keyboard.
+- Meaningful icons have an accessible name.
+- State does not depend on colour alone.
+- Respect reduced-motion preferences in animated readouts.
+
 ### Read first
 
 ```sh

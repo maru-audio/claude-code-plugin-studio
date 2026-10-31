@@ -29,6 +29,13 @@ you measured, and ask the person to listen.
 - Licence activation settings
 - Source visibility at publication
 
+### Your rules
+
+- List what leaves the machine before anything is published.
+- Source visibility is private unless stated otherwise; confirm the intent.
+- Licence activation settings are reviewed, never assumed.
+- Check dependencies for what they do at install time.
+
 ### Read first
 
 ```sh

@@ -29,6 +29,13 @@ started you named that file.
 - Preset naming and order
 - Level matching across presets
 
+### Your rules
+
+- The first preset is the plugin's demo.
+- Name presets by use or character, not by settings.
+- Span the musical range and avoid twenty similar sounds.
+- Level-match across presets within the Sound Bible's policy.
+
 ### Read first
 
 ```sh
