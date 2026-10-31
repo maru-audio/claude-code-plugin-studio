@@ -156,6 +156,7 @@ The default starter is a Processor, and `module eval` only supports a Graph with
 - `maru render` works on installed modules from the library, not on the project being edited.
 - An agent trial found no command to write test input, so nothing could be measured. `maru render` with no `--audio` gave silence.
 - No command reports spectrum or pitch of a render, or lets you choose the block size.
+- The `standard` trial wrote its own script for repeat-by-repeat analysis of an echo, because no command offers one.
 
 **Workaround:** `node tools/make-test-signal.mjs`, with the levels suite. `src/qualification.ts` expectations cover finite and audible.
 
@@ -239,8 +240,10 @@ The studio is an internal trial, with several things in the way of release. A co
 
 The README owes a measurement. One agent trial per rigor level on one brief is a start. It needs a person's blind listening, and a repeat on a clean machine after the blockers are fixed.
 
-- Two agent trials were run on a tape-echo brief; see the epic's results.
-- No person has listened to either result.
+- `minimal`: 6 files before the first module change, tool call 72 of 162, $10.57, 20 minutes. The full check passes, 3 of 5 stories are unmet, and nothing was measured or heard.
+- `standard`: 11 files before the first module change, tool call 116 of 216. Stopped by hand, unfinished. The fast check passes.
+- Neither trial delegated to any subagent, so the agent hierarchy is untested.
+- Both ran on the first version of the studio. Results are in `../maru-plugin-studio-trials/`. No person has listened to either.
 
 **Workaround:** See the README.
 

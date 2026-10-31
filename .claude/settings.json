@@ -17,7 +17,8 @@
       "Bash(npx maru module status*)",
       "Bash(npx maru module screenshot*)",
       "Bash(npm run typecheck)",
-      "Bash(node tools/*)"
+      "Bash(node tools/*)",
+      "Bash(node tests/*)"
     ],
     "ask": [
       "Bash(npx maru unpublish*)",

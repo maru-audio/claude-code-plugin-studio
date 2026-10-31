@@ -125,7 +125,14 @@ Type `/` in Claude Code to access all 104 skills:
 
 A fair question, and the answer should be a measurement. We owe that measurement and do not have it yet. The upstream project this is modelled on built one brief at different process levels; its heavier level wrote 30 documents before any code and ranked last. So `minimal` is the default here too.
 
-<!-- STUDIO-TRIAL-RESULTS -->
+First agent trials, one tape-echo brief, on this studio's first version, before the fixes they prompted. Treat these as a start, not a result:
+
+| `modes.rigor` | Files written before the first module change | First module edit | Cost and time | Outcome |
+| --- | ---: | ---: | --- | --- |
+| `minimal` | 6 | tool call 72 of 162 | $10.57, 20 min | Module built, and the full check passes. 3 of 5 stories unmet. **Nothing measured or heard** |
+| `standard` | 11 | tool call 116 of 216 when stopped | Stopped by hand, unfinished | The fast check passes. **Nothing heard** |
+
+Neither trial delegated to a single subagent, so the agent hierarchy itself is still untested. Nobody has listened to either result. [DEVX-077](docs/KNOWN-GAPS.md#devx-077) tracks a proper comparison.
 
 ### It renders the plugin, and a person listens
 
@@ -135,7 +142,24 @@ A passing test says nothing about how something sounds. So a story that changes 
 
 Measured with `maruaudio@0.0.7` on macOS. See [docs/KNOWN-GAPS.md](docs/KNOWN-GAPS.md) for each item and its task, and run `npm run studio:validate` for your own machine.
 
-<!-- WORKS-TODAY -->
+| Works | Result |
+| --- | --- |
+| Create a project, typecheck, full module check | Passes |
+| Workbench starts, and is driven in Chrome | Passes. No person has listened |
+| Screenshot of the face | Passes |
+| Levels with your own audio (`node tools/make-test-signal.mjs`) | Passes |
+| Pack a web Release; publication dry run | Passes. A real publish was not run |
+| Guides, DSP catalog, community search | Passes |
+
+| Does not work yet | Task |
+| --- | --- |
+| `module preview`, and levels with built-in audio: test audio is missing from the package | [DEVX-061](docs/KNOWN-GAPS.md#devx-061) |
+| `module pack` after `module preview` | [DEVX-065](docs/KNOWN-GAPS.md#devx-065) |
+| Local native builds: needs a private toolkit, and the messages are a dead end | [DEVX-062](docs/KNOWN-GAPS.md#devx-062) |
+| Native builds through publishing: [documented](docs/how-to/build-native-plugins.md), not verified | [DEVX-063](docs/KNOWN-GAPS.md#devx-063) |
+| Portability check and export for a public user | [DEVX-064](docs/KNOWN-GAPS.md#devx-064) |
+| Measuring a Processor, CPU, latency and soak | [DEVX-070](docs/KNOWN-GAPS.md#devx-070), [DEVX-071](docs/KNOWN-GAPS.md#devx-071) |
+| Local preset commands | [DEVX-067](docs/KNOWN-GAPS.md#devx-067) |
 
 ## Getting Started
 
