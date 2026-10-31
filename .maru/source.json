@@ -1,0 +1,22 @@
+{
+  "format": "maru-project-source/v1",
+  "reference": "@maru/blank-effect",
+  "requested": "@maru/blank-effect",
+  "kind": "starter",
+  "title": "blank-effect",
+  "creator": null,
+  "license": null,
+  "licenseLine": null,
+  "page": null,
+  "parent": null,
+  "version": {
+    "publication": null,
+    "declared": null,
+    "revision": null,
+    "cli": "0.0.7",
+    "cliMode": "dist"
+  },
+  "digest": "9abdf6871b3ed735086d975ae97d92b0d6a123beb0d4de125efcbc5b466821a8",
+  "moduleId": "local.maru-plugin-studio",
+  "startedAt": "2026-10-31T16:07:13.516Z"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "maru-plugin-studio",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Maru Plugin Studio — a Processor effect audio module",
+  "scripts": {
+    "dev": "maru dev .",
+    "typecheck": "tsc -p tsconfig.json",
+    "module:doctor": "maru module doctor",
+    "module:paths": "maru module paths src/index.ts",
+    "module:check": "maru module check . --fast",
+    "check:portability": "maru module check . --portability",
+    "test": "tsc -p tsconfig.json && maru module check .",
+    "module:pack": "maru module pack src/index.ts",
+    "module:export": "maru module export src/index.ts",
+    "build:standalone": "maru plugin build src/index.ts --format standalone",
+    "build:vst3": "maru plugin build src/index.ts --format vst3",
+    "build:clap": "maru plugin build src/index.ts --format clap",
+    "build:au": "maru plugin build src/index.ts --format au",
+    "build": "maru plugin build src/index.ts --format all",
+    "verify:formats": "maru module verify src/index.ts"
+  },
+  "dependencies": {
+    "maruaudio": "0.0.7",
+    "react": "^19.2.8"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/react": "^19.2.18"
+  },
+  "maru": {
+    "type": "audio-module",
+    "entry": "./src/index.ts",
+    "development": {
+      "sources": {
+        "module": "src/index.ts",
+        "dsp": "src/dsp/processor.ts",
+        "react": "src/ui/index.tsx",
+        "qualification": "src/qualification.ts"
+      }
+    },
+    "listing": {
+      "license": "maru-remix-1.0"
+    }
+  }
+}

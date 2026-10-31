@@ -1,0 +1,11 @@
+node_modules/
+build/
+dist/
+.maru/*
+!.maru/config.json
+!.maru/README.md
+!.maru/.gitignore
+!.maru/source.json
+.module-dev/
+*.tsbuildinfo
+.DS_Store

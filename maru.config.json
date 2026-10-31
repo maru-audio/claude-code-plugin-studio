@@ -1,0 +1,17 @@
+{
+  "$schema": "https://maru.audio/schema/project/config/alpha.json",
+  "type": "audio-module",
+  "entry": "./src/index.ts",
+  "development": {
+    "sources": {
+      "module": "src/index.ts",
+      "dsp": "src/dsp/processor.ts",
+      "react": "src/ui/index.tsx",
+      "qualification": "src/qualification.ts"
+    }
+  },
+  "listing": {
+    "license": "maru-remix-1.0"
+  },
+  "version": "0.0.1"
+}
