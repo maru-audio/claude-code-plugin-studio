@@ -14,6 +14,8 @@ The last line re-checks every command this studio names against the new version.
 
 ## The studio files
 
+Starting with `maru init --from` leaves out `.github/`, so copy `.github/workflows/check.yml` across if you want the CI check.
+
 ```bash
 git remote add studio <url-of-this-template>
 git fetch studio

@@ -21,7 +21,8 @@
     "build": "maru plugin build src/index.ts --format all",
     "verify:formats": "maru module verify src/index.ts",
     "studio:validate": "node tools/validate-studio.mjs",
-    "studio:lint": "node tools/skill-lint.mjs"
+    "studio:lint": "node tools/skill-lint.mjs",
+    "studio:drift": "node tools/check-starter-drift.mjs"
   },
   "dependencies": {
     "maruaudio": "0.0.7",
@@ -45,5 +46,6 @@
     "listing": {
       "license": "maru-remix-1.0"
     }
-  }
+  },
+  "license": "MIT"
 }

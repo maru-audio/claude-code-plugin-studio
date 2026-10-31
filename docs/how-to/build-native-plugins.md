@@ -35,7 +35,7 @@ Run `/release-checklist` for the rest, including a person listening.
 
 ### 2. Check it is your plugin
 
-`/start` does this for you. If you skipped it:
+`maru init --from` and `/start` both do this for you. If you skipped them:
 
 ```bash
 node tools/rename-project.mjs "Plugin Name" com.yourname.plugin-name

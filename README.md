@@ -174,13 +174,15 @@ Unlike the upstream project, this needs no Python or Bash: hooks and tools run o
 
 ### Setup
 
-1. **Use this template** on GitHub, or clone it:
+1. **Create your project.** The first route gives it its own name and id straight away:
 
    ```bash
-   git clone <your-copy-of-this-template> my-plugin
+   npx maruaudio init my-plugin --from <this-repository-url> --ref <tag>
    cd my-plugin
    npm install
    ```
+
+   Or click **Use this template** on GitHub and clone your copy. `/start` then gives it its own identity.
 
 2. **See what this machine can do:**
 
@@ -327,4 +329,4 @@ The structure, hierarchy and much of the wording of this studio are adapted from
 
 ## License
 
-Studio files are under the [MIT License](LICENSE), including the upstream copyright notice. **That is separate from your plugin's licence:** `maru.config.json` sets your module's published listing licence, which defaults to `maru-remix-1.0`, and you can change it. The `maruaudio` package and other dependencies keep their own licences.
+Studio files are under the [MIT License](LICENSE), including the upstream copyright notice. **That is separate from your plugin's licence:** `maru.config.json` sets your module's published listing licence. Starting with `maru init --from` carries over this repository's MIT licence, and starting from the bare starter defaults to `maru-remix-1.0`. Choose the one you want before you publish. The `maruaudio` package and other dependencies keep their own licences.
