@@ -159,7 +159,13 @@
         "pack",
         "src/index.ts"
       ],
-      "gap": "DEVX-065"
+      "gap": "DEVX-065",
+      "fresh": true,
+      "setup": [
+        "module",
+        "preview",
+        "src/index.ts"
+      ]
     },
     {
       "id": "publish-dry-run",

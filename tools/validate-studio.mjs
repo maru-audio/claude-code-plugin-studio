@@ -211,6 +211,7 @@ async function runCapabilities() {
         cwd = makeSandbox()
       }
       process.stdout.write(`  ${cap.id} ... `)
+      if (cap.setup) await run({ args: cap.setup, timeoutSec: 120 }, cwd)
       const r = await run(cap, cwd)
       const status = classify(cap, r)
       console.log(`${status} (${(r.ms / 1000).toFixed(1)} s)`)
