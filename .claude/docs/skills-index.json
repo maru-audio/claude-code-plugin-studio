@@ -1,0 +1,710 @@
+{
+ "groups": {
+  "Onboarding & Navigation": [
+   "start",
+   "help",
+   "project-stage-detect",
+   "setup-target",
+   "adopt",
+   "settings",
+   "studio-validate",
+   "studio-gap"
+  ],
+  "Product Design": [
+   "brainstorm",
+   "map-signal-flow",
+   "design-module",
+   "quick-design",
+   "review-all-designs",
+   "design-review",
+   "propagate-design-change",
+   "consistency-check"
+  ],
+  "Sound & Visual Identity": [
+   "sound-bible",
+   "face-bible",
+   "asset-spec",
+   "asset-audit",
+   "generate-sounds"
+  ],
+  "UX & Face": [
+   "ux-design",
+   "ux-review",
+   "face-from-reference",
+   "parameter-pass"
+  ],
+  "Architecture": [
+   "create-architecture",
+   "architecture-decision",
+   "architecture-review",
+   "create-control-manifest"
+  ],
+  "Stories & Sprints": [
+   "create-epics",
+   "create-stories",
+   "story-readiness",
+   "dev-story",
+   "story-done",
+   "sprint-plan",
+   "sprint-status",
+   "estimate"
+  ],
+  "Reviews & Analysis": [
+   "code-review",
+   "gain-staging",
+   "sound-compare",
+   "content-audit",
+   "scope-check",
+   "perf-profile",
+   "tech-debt",
+   "gate-check",
+   "security-audit"
+  ],
+  "QA & Testing": [
+   "qa-plan",
+   "smoke-check",
+   "listening-test",
+   "soak-test",
+   "regression-suite",
+   "test-setup",
+   "test-helpers",
+   "test-evidence-review",
+   "test-flakiness",
+   "host-matrix",
+   "state-recall",
+   "midi-test",
+   "skill-test",
+   "skill-improve"
+  ],
+  "Production": [
+   "milestone-review",
+   "retrospective",
+   "bug-report",
+   "bug-triage",
+   "reverse-document",
+   "onboard",
+   "localize"
+  ],
+  "Creative": [
+   "prototype",
+   "vertical-slice",
+   "preset-pass",
+   "demo-pass"
+  ],
+  "Release": [
+   "build-plugin",
+   "publish",
+   "release-checklist",
+   "launch-checklist",
+   "changelog",
+   "patch-notes",
+   "hotfix",
+   "day-one-patch"
+  ],
+  "Team Orchestration": [
+   "team-effect",
+   "team-instrument",
+   "team-face",
+   "team-sound",
+   "team-presets",
+   "team-polish",
+   "team-qa",
+   "team-release",
+   "team-launch"
+  ]
+ },
+ "skills": [
+  {
+   "name": "start",
+   "group": "Onboarding & Navigation",
+   "desc": "Guides a first-time user through onboarding and picks the right workflow. Use when the user is new, just cloned the template, has no idea yet, asks where to begin, or wants to bring in existing work.",
+   "gaps": [
+    "DEVX-062",
+    "DEVX-063"
+   ]
+  },
+  {
+   "name": "help",
+   "group": "Onboarding & Navigation",
+   "desc": "What should I do next? Use when stuck or unsure what comes next.",
+   "gaps": []
+  },
+  {
+   "name": "project-stage-detect",
+   "group": "Onboarding & Navigation",
+   "desc": "Analyze project state, detect the stage, identify gaps and recommend next steps. 'Where are we in development?'",
+   "gaps": []
+  },
+  {
+   "name": "setup-target",
+   "group": "Onboarding & Navigation",
+   "desc": "Choose what this project promises to run on: browser, VST3, CLAP, AU, AAX, standalone or hardware. Records it and checks the machine can build it.",
+   "gaps": [
+    "DEVX-062",
+    "DEVX-063"
+   ]
+  },
+  {
+   "name": "adopt",
+   "group": "Onboarding & Navigation",
+   "desc": "Brownfield audit: bring an existing module or plugin idea into the studio with a numbered migration plan. Checks that existing artifacts actually work.",
+   "gaps": []
+  },
+  {
+   "name": "settings",
+   "group": "Onboarding & Navigation",
+   "desc": "View or change studio config: rigor, automation, targets, stage.",
+   "gaps": []
+  },
+  {
+   "name": "studio-validate",
+   "group": "Onboarding & Navigation",
+   "desc": "Run the validator: checks every command, flag and guide named in this studio against the installed CLI, then tries each capability on this project. Use after install or an upgrade, or to report what does not work.",
+   "gaps": []
+  },
+  {
+   "name": "studio-gap",
+   "group": "Onboarding & Navigation",
+   "desc": "Record something the studio or Maru could not do: a failing command, a missing capability or misleading documentation. Use when a tool fails or a skill hits a dead end.",
+   "gaps": []
+  },
+  {
+   "name": "brainstorm",
+   "group": "Product Design",
+   "desc": "Guides the user through finding and choosing a plugin concept. Use when they want ideas, a new concept, or have a musical problem but no plugin yet.",
+   "gaps": []
+  },
+  {
+   "name": "map-signal-flow",
+   "group": "Product Design",
+   "desc": "Decompose a concept into signal blocks, controls and their dependencies, and set the design order.",
+   "gaps": []
+  },
+  {
+   "name": "design-module",
+   "group": "Product Design",
+   "desc": "Section-by-section Plugin Design Document for one module or block. Walks through each required section, one at a time.",
+   "gaps": []
+  },
+  {
+   "name": "quick-design",
+   "group": "Product Design",
+   "desc": "Lightweight spec for small changes: a tuning adjustment or one new control. Skips the full PDD.",
+   "gaps": []
+  },
+  {
+   "name": "review-all-designs",
+   "group": "Product Design",
+   "desc": "Holistic review across PDDs: contradictions, controls that do the same thing, and too many controls.",
+   "gaps": []
+  },
+  {
+   "name": "design-review",
+   "group": "Product Design",
+   "desc": "Reviews one design document for completeness, consistency, implementability and whether it can be tested.",
+   "gaps": []
+  },
+  {
+   "name": "propagate-design-change",
+   "group": "Product Design",
+   "desc": "Finds architecture decisions and stories made stale by a changed design document, and resolves each.",
+   "gaps": []
+  },
+  {
+   "name": "consistency-check",
+   "group": "Product Design",
+   "desc": "Check parameter names, ranges and units agree across the contract, face, presets, design documents and manual.",
+   "gaps": []
+  },
+  {
+   "name": "sound-bible",
+   "group": "Sound & Visual Identity",
+   "desc": "Author the Sound Bible: the sonic identity, references and level policy that all sound work must follow.",
+   "gaps": []
+  },
+  {
+   "name": "face-bible",
+   "group": "Sound & Visual Identity",
+   "desc": "Author the Face Bible: visual identity, references, type, colour and control style.",
+   "gaps": []
+  },
+  {
+   "name": "asset-spec",
+   "group": "Sound & Visual Identity",
+   "desc": "Specs for samples, impulse responses and images: format, rights, slot and, if generated, the prompt and seed.",
+   "gaps": []
+  },
+  {
+   "name": "asset-audit",
+   "group": "Sound & Visual Identity",
+   "desc": "Audit assets against the spec: orphans, missing rights, size and format.",
+   "gaps": []
+  },
+  {
+   "name": "generate-sounds",
+   "group": "Sound & Visual Identity",
+   "desc": "Generate audio, a kit or MIDI with hosted jobs. Asks first, since jobs can cost money.",
+   "gaps": []
+  },
+  {
+   "name": "ux-design",
+   "group": "UX & Face",
+   "desc": "Section-by-section UX spec for the face: what is visible at rest, the first minute, and how controls are reached.",
+   "gaps": []
+  },
+  {
+   "name": "ux-review",
+   "group": "UX & Face",
+   "desc": "Validate a UX spec or the built face: accessibility, concision and agreement with the design.",
+   "gaps": [
+    "DEVX-074"
+   ]
+  },
+  {
+   "name": "face-from-reference",
+   "group": "UX & Face",
+   "desc": "Build the face from a reference image inside this module: parameters first, then the face, DSP last.",
+   "gaps": []
+  },
+  {
+   "name": "parameter-pass",
+   "group": "UX & Face",
+   "desc": "Design or change the parameter contract: names, ranges, tapers, defaults, order.",
+   "gaps": []
+  },
+  {
+   "name": "create-architecture",
+   "group": "Architecture",
+   "desc": "Author the technical plan before code: owner, starter, Graph or Processor, DSP candidates, wiring, prerequisites and verification order.",
+   "gaps": []
+  },
+  {
+   "name": "architecture-decision",
+   "group": "Architecture",
+   "desc": "Create an ADR documenting one technical decision: context, alternatives and consequences.",
+   "gaps": []
+  },
+  {
+   "name": "architecture-review",
+   "group": "Architecture",
+   "desc": "Map design requirements to decisions. Finds gaps, conflicts between ADRs, and unsupported assumptions about Maru.",
+   "gaps": []
+  },
+  {
+   "name": "create-control-manifest",
+   "group": "Architecture",
+   "desc": "Build a short must-do and never-do list for this module from accepted ADRs.",
+   "gaps": []
+  },
+  {
+   "name": "create-epics",
+   "group": "Stories & Sprints",
+   "desc": "Turn the design and architecture into epics, one per module area.",
+   "gaps": []
+  },
+  {
+   "name": "create-stories",
+   "group": "Stories & Sprints",
+   "desc": "Break one epic, or the brief at minimal rigor, into stories with acceptance criteria.",
+   "gaps": []
+  },
+  {
+   "name": "story-readiness",
+   "group": "Stories & Sprints",
+   "desc": "Check whether a story is ready: clear acceptance, no open questions, valid decisions.",
+   "gaps": []
+  },
+  {
+   "name": "dev-story",
+   "group": "Stories & Sprints",
+   "desc": "Implement one story: code, check, evidence. Use when the user says to build or implement a story.",
+   "gaps": [
+    "DEVX-061"
+   ]
+  },
+  {
+   "name": "story-done",
+   "group": "Stories & Sprints",
+   "desc": "Close a finished story: verify each acceptance item and record deviations.",
+   "gaps": []
+  },
+  {
+   "name": "sprint-plan",
+   "group": "Stories & Sprints",
+   "desc": "Create or update a sprint plan from the milestone and capacity.",
+   "gaps": []
+  },
+  {
+   "name": "sprint-status",
+   "group": "Stories & Sprints",
+   "desc": "Fast sprint snapshot. 'How is the sprint going?'",
+   "gaps": []
+  },
+  {
+   "name": "estimate",
+   "group": "Stories & Sprints",
+   "desc": "Estimate effort from complexity, dependencies and risk, with a confidence level.",
+   "gaps": []
+  },
+  {
+   "name": "code-review",
+   "group": "Reviews & Analysis",
+   "desc": "Review module code: realtime safety first, then ownership, contract use and tests.",
+   "gaps": []
+  },
+  {
+   "name": "gain-staging",
+   "group": "Reviews & Analysis",
+   "desc": "Check output against input level, per preset and across inputs. The audio version of a balance check.",
+   "gaps": [
+    "DEVX-061",
+    "DEVX-070"
+   ]
+  },
+  {
+   "name": "sound-compare",
+   "group": "Reviews & Analysis",
+   "desc": "Compare the module against a reference recording or plugin for a chosen musical property.",
+   "gaps": [
+    "DEVX-061",
+    "DEVX-073"
+   ]
+  },
+  {
+   "name": "content-audit",
+   "group": "Reviews & Analysis",
+   "desc": "Audit planned against built: controls, presets, demos and assets.",
+   "gaps": []
+  },
+  {
+   "name": "scope-check",
+   "group": "Reviews & Analysis",
+   "desc": "Scope creep check: current scope against the brief. 'Any scope creep?'",
+   "gaps": []
+  },
+  {
+   "name": "perf-profile",
+   "group": "Reviews & Analysis",
+   "desc": "Performance review: find expensive code, measure against budgets, rank optimizations.",
+   "gaps": [
+    "DEVX-071"
+   ]
+  },
+  {
+   "name": "tech-debt",
+   "group": "Reviews & Analysis",
+   "desc": "Track and prioritize technical debt: TODOs, temporary labels, workarounds.",
+   "gaps": []
+  },
+  {
+   "name": "gate-check",
+   "group": "Reviews & Analysis",
+   "desc": "Ready to advance between phases? Returns PASS, CONCERNS, NOT ASSESSED or FAIL with blockers. 'Can we move on?'",
+   "gaps": []
+  },
+  {
+   "name": "security-audit",
+   "group": "Reviews & Analysis",
+   "desc": "Security review before publishing: dependencies, credentials, licence settings and source visibility.",
+   "gaps": []
+  },
+  {
+   "name": "qa-plan",
+   "group": "QA & Testing",
+   "desc": "QA plan for a sprint or release: which checks are automated, what a person must listen to, and which hosts.",
+   "gaps": []
+  },
+  {
+   "name": "smoke-check",
+   "group": "QA & Testing",
+   "desc": "Critical-path smoke gate: does it compile, load, render and show its face?",
+   "gaps": []
+  },
+  {
+   "name": "listening-test",
+   "group": "QA & Testing",
+   "desc": "Structured listening session: a script for a person, then a report of what they heard. The audio version of a playtest.",
+   "gaps": [
+    "DEVX-073"
+   ]
+  },
+  {
+   "name": "soak-test",
+   "group": "QA & Testing",
+   "desc": "Long-running behaviour: hours of audio, automation, tails, memory, denormals.",
+   "gaps": [
+    "DEVX-071"
+   ]
+  },
+  {
+   "name": "regression-suite",
+   "group": "QA & Testing",
+   "desc": "Map tests to critical behaviour, find fixed bugs without a regression test, and extend the qualification tapes.",
+   "gaps": [
+    "DEVX-072"
+   ]
+  },
+  {
+   "name": "test-setup",
+   "group": "QA & Testing",
+   "desc": "Set up tests and CI: test script, qualification tapes and a GitHub Actions workflow.",
+   "gaps": [
+    "DEVX-072"
+   ]
+  },
+  {
+   "name": "test-helpers",
+   "group": "QA & Testing",
+   "desc": "Write project test helpers: tape builders, event builders and assertions.",
+   "gaps": [
+    "DEVX-072"
+   ]
+  },
+  {
+   "name": "test-evidence-review",
+   "group": "QA & Testing",
+   "desc": "Review the quality of tests and evidence, not just their existence. ADEQUATE, INCOMPLETE or MISSING.",
+   "gaps": []
+  },
+  {
+   "name": "test-flakiness",
+   "group": "QA & Testing",
+   "desc": "Find flaky checks from CI logs or repeated runs.",
+   "gaps": []
+  },
+  {
+   "name": "host-matrix",
+   "group": "QA & Testing",
+   "desc": "Maintain the host and format compatibility matrix, with evidence per cell.",
+   "gaps": [
+    "DEVX-063",
+    "DEVX-075"
+   ]
+  },
+  {
+   "name": "state-recall",
+   "group": "QA & Testing",
+   "desc": "Test save and recall: parameters, presets, authored state and automation.",
+   "gaps": [
+    "DEVX-072"
+   ]
+  },
+  {
+   "name": "midi-test",
+   "group": "QA & Testing",
+   "desc": "Test MIDI behaviour: note lifecycle, stuck notes, overlapping notes and capacity.",
+   "gaps": [
+    "DEVX-072"
+   ]
+  },
+  {
+   "name": "skill-test",
+   "group": "QA & Testing",
+   "desc": "Validate this studio's skills: structure, and every command, flag and guide they name.",
+   "gaps": []
+  },
+  {
+   "name": "skill-improve",
+   "group": "QA & Testing",
+   "desc": "Improve a skill through a test, fix and retest loop.",
+   "gaps": []
+  },
+  {
+   "name": "milestone-review",
+   "group": "Production",
+   "desc": "Milestone review: completeness, quality, risk and a go or no-go recommendation.",
+   "gaps": []
+  },
+  {
+   "name": "retrospective",
+   "group": "Production",
+   "desc": "Sprint or milestone retrospective with actions for next time.",
+   "gaps": []
+  },
+  {
+   "name": "bug-report",
+   "group": "Production",
+   "desc": "Structured bug report: what you did, what you heard, what you expected, and how to reproduce it.",
+   "gaps": []
+  },
+  {
+   "name": "bug-triage",
+   "group": "Production",
+   "desc": "Re-evaluate open bugs: priority against severity, and what is a systemic trend.",
+   "gaps": []
+  },
+  {
+   "name": "reverse-document",
+   "group": "Production",
+   "desc": "Generate missing design or architecture docs from existing code.",
+   "gaps": []
+  },
+  {
+   "name": "onboard",
+   "group": "Production",
+   "desc": "Onboarding doc for a new contributor or agent: project state, conventions and priorities.",
+   "gaps": []
+  },
+  {
+   "name": "localize",
+   "group": "Production",
+   "desc": "Face and manual translation: find hardcoded strings, extract a table, check lengths.",
+   "gaps": [
+    "DEVX-074"
+   ]
+  },
+  {
+   "name": "prototype",
+   "group": "Creative",
+   "desc": "Test one risky idea quickly inside the module workbench. PROCEED, PIVOT or KILL.",
+   "gaps": []
+  },
+  {
+   "name": "vertical-slice",
+   "group": "Creative",
+   "desc": "End-to-end validation: one control, one sound, one preset, from face to publication dry run.",
+   "gaps": []
+  },
+  {
+   "name": "preset-pass",
+   "group": "Creative",
+   "desc": "Write or revise factory presets: names, order and range.",
+   "gaps": [
+    "DEVX-067"
+   ]
+  },
+  {
+   "name": "demo-pass",
+   "group": "Creative",
+   "desc": "Produce demo audio and the first impression on the module page.",
+   "gaps": [
+    "DEVX-061"
+   ]
+  },
+  {
+   "name": "build-plugin",
+   "group": "Release",
+   "desc": "Build native plug-in formats and read the report. A binary alone does not prove anything.",
+   "gaps": [
+    "DEVX-062",
+    "DEVX-063",
+    "DEVX-064"
+   ]
+  },
+  {
+   "name": "publish",
+   "group": "Release",
+   "desc": "Publish this module online. Dry run first, and always after an explicit yes.",
+   "gaps": []
+  },
+  {
+   "name": "release-checklist",
+   "group": "Release",
+   "desc": "Pre-release checklist: build verification, levels, presets, rights, version.",
+   "gaps": []
+  },
+  {
+   "name": "launch-checklist",
+   "group": "Release",
+   "desc": "Launch readiness across every department: code, sound, face, docs, page, community, legal. Go or no-go.",
+   "gaps": []
+  },
+  {
+   "name": "changelog",
+   "group": "Release",
+   "desc": "Generate a changelog from git commits and stories.",
+   "gaps": []
+  },
+  {
+   "name": "patch-notes",
+   "group": "Release",
+   "desc": "Musician-facing notes from the changelog.",
+   "gaps": []
+  },
+  {
+   "name": "hotfix",
+   "group": "Release",
+   "desc": "Emergency fix outside the sprint, with a full record and a regression test.",
+   "gaps": []
+  },
+  {
+   "name": "day-one-patch",
+   "group": "Release",
+   "desc": "First patch after launch: known issues and the first feedback, with a rollback plan.",
+   "gaps": [
+    "DEVX-068"
+   ]
+  },
+  {
+   "name": "team-effect",
+   "group": "Team Orchestration",
+   "desc": "Orchestrate the effect team: product-designer, parameter-designer, dsp-engineer, face-engineer, sound-director, qa-tester. Coordinates several agents on one feature.",
+   "gaps": [
+    "DEVX-061"
+   ]
+  },
+  {
+   "name": "team-instrument",
+   "group": "Team Orchestration",
+   "desc": "Orchestrate the instrument team: product-designer, voice-engineer, parameter-designer, face-engineer, sound-director, qa-tester. Coordinates several agents on one feature.",
+   "gaps": [
+    "DEVX-072"
+   ]
+  },
+  {
+   "name": "team-face",
+   "group": "Team Orchestration",
+   "desc": "Orchestrate the face team: ux-designer, art-director, ui-kit-specialist, face-engineer, accessibility-specialist. Coordinates several agents on one feature.",
+   "gaps": [
+    "DEVX-074"
+   ]
+  },
+  {
+   "name": "team-sound",
+   "group": "Team Orchestration",
+   "desc": "Orchestrate the sound team: sound-director, dsp-library-specialist, dsp-engineer, preset-designer, demo-producer. Coordinates several agents on one feature.",
+   "gaps": [
+    "DEVX-073"
+   ]
+  },
+  {
+   "name": "team-presets",
+   "group": "Team Orchestration",
+   "desc": "Orchestrate the preset and content team: sound-director, preset-designer, sample-librarian, copywriter. Coordinates several agents on one feature.",
+   "gaps": [
+    "DEVX-067"
+   ]
+  },
+  {
+   "name": "team-polish",
+   "group": "Team Orchestration",
+   "desc": "Orchestrate the polish team: performance-analyst, face-engineer, preset-designer, qa-tester. Coordinates several agents on one feature.",
+   "gaps": [
+    "DEVX-071"
+   ]
+  },
+  {
+   "name": "team-qa",
+   "group": "Team Orchestration",
+   "desc": "Orchestrate the QA team: qa-lead, qa-tester, host-compat-engineer. Coordinates several agents on one feature.",
+   "gaps": [
+    "DEVX-072",
+    "DEVX-075"
+   ]
+  },
+  {
+   "name": "team-release",
+   "group": "Team Orchestration",
+   "desc": "Orchestrate the release team: release-manager, qa-lead, security-engineer, publishing-specialist. Coordinates several agents on one feature.",
+   "gaps": [
+    "DEVX-063"
+   ]
+  },
+  {
+   "name": "team-launch",
+   "group": "Team Orchestration",
+   "desc": "Orchestrate the launch team: release-manager, copywriter, docs-lead, community-manager, demo-producer. Coordinates several agents on one feature.",
+   "gaps": []
+  }
+ ]
+}

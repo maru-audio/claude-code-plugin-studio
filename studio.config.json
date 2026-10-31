@@ -1,0 +1,22 @@
+{
+  "studio": {
+    "version": "0.1.0",
+    "derived_from": "Claude Code Game Studios v1.2.0"
+  },
+  "project": {
+    "stage": "Concept",
+    "name": "Maru Plugin Studio"
+  },
+  "modes": {
+    "rigor": "minimal",
+    "automation": "ask"
+  },
+  "targets": [
+    "browser"
+  ],
+  "features": {
+    "read_guard": true,
+    "read_guard_kb": 40,
+    "update_check": true
+  }
+}

@@ -9,3 +9,8 @@ dist/
 .module-dev/
 *.tsbuildinfo
 .DS_Store
+
+# Studio
+studio.local.json
+production/session-logs/
+production/session-state/

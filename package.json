@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
-  "description": "Maru Plugin Studio — a Processor effect audio module",
+  "description": "Maru Plugin Studio \u2014 a Processor effect audio module",
   "scripts": {
     "dev": "maru dev .",
     "typecheck": "tsc -p tsconfig.json",
@@ -19,7 +19,9 @@
     "build:clap": "maru plugin build src/index.ts --format clap",
     "build:au": "maru plugin build src/index.ts --format au",
     "build": "maru plugin build src/index.ts --format all",
-    "verify:formats": "maru module verify src/index.ts"
+    "verify:formats": "maru module verify src/index.ts",
+    "studio:validate": "node tools/validate-studio.mjs",
+    "studio:lint": "node tools/skill-lint.mjs"
   },
   "dependencies": {
     "maruaudio": "0.0.7",

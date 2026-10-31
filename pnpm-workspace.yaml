@@ -1,3 +1,5 @@
 # pnpm only: approve esbuild's install script. Other package managers ignore this file.
 allowBuilds:
   esbuild: true
+minimumReleaseAgeExclude:
+  - maruaudio@0.0.7

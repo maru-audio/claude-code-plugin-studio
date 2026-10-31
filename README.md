@@ -1,109 +1,302 @@
-# Maru Plugin Studio
+<p align="center">
+  <h1 align="center">Maru Plugin Studio</h1>
+  <p align="center">
+    Turn a single Claude Code session into a full audio plugin studio.
+    <br />
+    38 agents. 88 skills. One coordinated AI team, on a real Maru module.
+  </p>
+</p>
 
-A new audio module project built on the [Maru framework](https://maru.audio).
-Prototype locally in the browser workbench, inspect parameters and runtime
-diagnostics with its debugging tools, and prepare plug-in exports for supported
-DAWs. Selected hardware targets use additional target-specific tooling and
-qualification; availability depends on the module and installed toolchain.
-See the [Maru documentation](https://maru.audio/docs) for authoring and delivery
-guidance.
+---
 
-The starter DSP is an audio-in / audio-out effect: a soft drive into a one-pole tone control.
+> **Status: internal trial, not released.** This template exists to walk the whole path a new user would take and find what is missing. [What works today](#what-works-today) is measured, not promised. Run `npm run studio:validate` to see what works on your machine.
 
-```sh
-npm install
-npm run dev            # live player in your browser
-npm run test           # typecheck + the full module check
+## Why This Exists
+
+Making a plugin with AI is powerful, but a single chat session has no structure. Nobody stops you from shipping a preset that clips, skipping the listening test, or adding a twelfth knob. There is no QA pass, no sound review, no one asking "does this still do the one thing it promised?"
+
+**Maru Plugin Studio** gives your AI session the structure of a real plugin company. Instead of one general-purpose assistant, you get 38 specialized agents organized into a studio hierarchy: directors who guard the vision, department leads who own their domains, and specialists who do the hands-on work. Each agent has defined responsibilities, escalation paths and quality gates.
+
+The result: you still make every decision, and you are still the only one who can say how it sounds. But now you have a team that asks the right questions, catches mistakes early, and keeps your project organized from first idea to published release.
+
+It is deliberately more opinionated than the [Maru agent skill](https://github.com/maru-audio/maru-skill). The skill tells an agent what Maru can do. This tells it how we think a plugin should get made.
+
+## Table of Contents
+
+- [What's Included](#whats-included)
+- [Studio Hierarchy](#studio-hierarchy)
+- [Slash Commands](#slash-commands)
+- [Does it produce plugins, or documents?](#does-it-produce-plugins-or-documents)
+- [What works today](#what-works-today)
+- [Getting Started](#getting-started)
+- [Configuration](#configuration)
+- [Upgrading](#upgrading)
+- [Project Structure](#project-structure)
+- [How It Works](#how-it-works)
+- [Design Philosophy](#design-philosophy)
+- [Customization](#customization)
+- [Credits](#credits)
+- [License](#license)
+
+## What's Included
+
+| Category | Count | Description |
+| --- | --- | --- |
+| **Module** | 1 | A working Maru effect in `src/`, from the official blank starter |
+| **Agents** | 38 | Specialized subagents across product, DSP, face, sound, QA, release and Maru itself |
+| **Skills** | 88 | Slash commands for every phase (`/start`, `/design-module`, `/dev-story`, `/gain-staging`, `/publish`) |
+| **Hooks** | 14 | Automated checks on commits, pushes, face and DSP writes, large reads, assets and session lifecycle |
+| **Rules** | 13 | Path-scoped standards for DSP, faces, the contract, presets, assets and more |
+| **Templates** | 15 | Briefs, design documents, ADRs, listening reports, host matrices, release checklists |
+| **How-to guides** | 7 | [Effect, instrument, MIDI tool, sample kit, face from an image, web audio port, publishing](docs/how-to/) |
+| **Validator** | 1 | Checks every command this studio names against your installed CLI, then tries each capability |
+
+## Studio Hierarchy
+
+```
+Tier 1: Directors
+  creative-director    technical-director    producer
+
+Tier 2: Department Leads
+  product-designer     lead-dsp-engineer     sound-director
+  art-director         qa-lead               release-manager
+  docs-lead            localization-lead     maru-specialist
+
+Tier 3: Specialists
+  dsp-engineer         voice-engineer        midi-engineer
+  graph-engineer       parameter-designer    face-engineer
+  ux-designer          preset-designer       sample-librarian
+  demo-producer        prototyper            performance-analyst
+  host-compat-engineer native-format-engineer devops-engineer
+  security-engineer    qa-tester             accessibility-specialist
+  community-manager    copywriter            tools-programmer
+
+  Maru specialists
+  restricted-typescript-specialist           dsp-library-specialist
+  ui-kit-specialist    generative-audio-specialist  publishing-specialist
 ```
 
-## The module
+Each agent declares a model: the directors ask for Opus, most specialists name Sonnet, and the rest inherit your session's model.
+
+## Slash Commands
+
+Type `/` in Claude Code to access all 88 skills:
+
+**Onboarding & Navigation**
+`/start` `/help` `/project-stage-detect` `/setup-target` `/adopt` `/settings` `/studio-validate` `/studio-gap`
+
+**Product Design**
+`/brainstorm` `/map-signal-flow` `/design-module` `/quick-design` `/review-all-designs` `/design-review` `/propagate-design-change` `/consistency-check`
+
+**Sound & Visual Identity**
+`/sound-bible` `/face-bible` `/asset-spec` `/asset-audit` `/generate-sounds`
+
+**UX & Face**
+`/ux-design` `/ux-review` `/face-from-reference` `/parameter-pass`
+
+**Architecture**
+`/create-architecture` `/architecture-decision` `/architecture-review` `/create-control-manifest`
+
+**Stories & Sprints**
+`/create-epics` `/create-stories` `/story-readiness` `/dev-story` `/story-done` `/sprint-plan` `/sprint-status` `/estimate`
+
+**Reviews & Analysis**
+`/code-review` `/gain-staging` `/sound-compare` `/content-audit` `/scope-check` `/perf-profile` `/tech-debt` `/gate-check` `/security-audit`
+
+**QA & Testing**
+`/qa-plan` `/smoke-check` `/listening-test` `/soak-test` `/regression-suite` `/test-setup` `/test-helpers` `/test-evidence-review` `/test-flakiness` `/host-matrix` `/state-recall` `/midi-test` `/skill-test` `/skill-improve`
+
+**Production**
+`/milestone-review` `/retrospective` `/bug-report` `/bug-triage` `/reverse-document` `/onboard` `/localize`
+
+**Creative**
+`/prototype` `/vertical-slice` `/preset-pass` `/demo-pass`
+
+**Release**
+`/build-plugin` `/publish` `/release-checklist` `/launch-checklist` `/changelog` `/patch-notes` `/hotfix` `/day-one-patch`
+
+**Team Orchestration**
+`/team-effect` `/team-instrument` `/team-face` `/team-sound` `/team-presets` `/team-polish` `/team-qa` `/team-release` `/team-launch`
+
+## Does it produce plugins, or documents?
+
+A fair question, and the answer should be a measurement. We owe that measurement and do not have it yet. The upstream project this is modelled on built one brief at different process levels; its heavier level wrote 30 documents before any code and ranked last. So `minimal` is the default here too.
+
+<!-- STUDIO-TRIAL-RESULTS -->
+
+### It renders the plugin, and a person listens
+
+A passing test says nothing about how something sounds. So a story that changes the sound is not closed until it has been rendered, measured, and a person has been asked to listen in the workbench. Measured health and listening evidence are reported separately. **Not run** is a valid result. No agent may claim that something sounds good.
+
+## What works today
+
+Measured with `maruaudio@0.0.7` on macOS. See [docs/KNOWN-GAPS.md](docs/KNOWN-GAPS.md) for each item and its task, and run `npm run studio:validate` for your own machine.
+
+<!-- WORKS-TODAY -->
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) 22.12 or later
+- [Git](https://git-scm.com/)
+- [Claude Code](https://code.claude.com/docs/en/setup)
+- A Chromium browser, for the workbench and screenshots
+
+Unlike the upstream project, this needs no Python or Bash: hooks and tools run on Node, which every Maru project already has.
+
+### Setup
+
+1. **Use this template** on GitHub, or clone it:
+
+   ```bash
+   git clone <your-copy-of-this-template> my-plugin
+   cd my-plugin
+   npm install
+   ```
+
+2. **See what this machine can do:**
+
+   ```bash
+   npm run studio:validate
+   ```
+
+3. **Open Claude Code in the project's root folder** (the one holding `CLAUDE.md`) and start a session:
+
+   ```bash
+   claude
+   ```
+
+   Starting it in a subfolder such as `src/` skips the project's hooks and permission rules.
+
+4. **Run `/start`.** It asks where you are (no idea, vague idea, clear idea, existing work) and guides you to the right workflow.
+
+   Or jump straight in:
+
+   - `/brainstorm`: explore plugin ideas
+   - `/face-from-reference path/to/image.png`: start from a look
+   - `/quick-design`: a small change to what is here
+
+5. **Hear it:** run `npm run dev` and press Play. An effect needs an input signal.
+
+## Configuration
+
+`studio.config.json` at the repo root is the single source of truth for how the studio behaves. `/start` writes it for you. The one question that matters most is **`modes.rigor`**:
+
+- **`minimal`** (default): sketch speed. A one-page brief, no required design documents, smoke-level QA, solo review. `/start` → `/brainstorm` → `/create-stories` → `/dev-story` ↔ `/story-done` → `/publish`.
+- **`standard`**: five required design sections, balanced documents, standard QA evidence, lean review.
+- **`full`**: all design sections, thorough documents, full QA evidence, full director review.
+
+Raise it with `/settings modes.rigor=standard` when the project grows. Per-developer preferences go in the gitignored `studio.local.json`. Details are in [.claude/docs/workflow-modes.md](.claude/docs/workflow-modes.md).
+
+## Upgrading
+
+See [UPGRADING.md](UPGRADING.md). GitHub templates keep no link to their source, so a copy of this repository upgrades by merging from a remote, as described there.
+
+## Project Structure
 
 ```
-src/index.ts          the authoring entry — exports AUDIO_MODULE
-src/contract.ts       the parameter schema, shared by the entry and the DSP
-src/factory-bank.ts   schema-derived Initial and contrasting factory sounds
-src/qualification.ts  deterministic host audio/MIDI/automation fixture
-src/dsp/processor.ts  the product DSP — this is where the sound is
-src/dsp/index.ts      the public DSP surface, for composition and tests
-src/ui/index.tsx       module-owned face with public UI-kit controls
-src/ui/styles.css      scoped face styling
+CLAUDE.md                     # Master configuration for Claude Code
+AGENTS.md                     # The Maru module rules, for any coding agent
+studio.config.json            # Stage, rigor, automation, targets
+.claude/
+  settings.json               # Hooks, permissions, MARU_SILENT
+  agents/                     # 38 agent definitions
+  skills/                     # 88 slash commands
+  hooks/                      # 14 Node hooks and a helper
+  rules/                      # 13 path-scoped standards
+  statusline.mjs              # Stage and rigor in the status line
+  docs/
+    workflow-catalog.json     # 7-phase pipeline (read by /help)
+    templates/                # 15 document templates
+src/                          # The module: entry, contract, DSP, face, presets, qualification
+assets/                       # Samples, impulse responses, images
+demos/                        # Demo audio rendered through the module
+design/                       # Brief, Sound Bible, Face Bible, design documents
+docs/                         # How-to guides, workflow guide, architecture, manual
+tests/                        # The project's own tests
+tools/                        # Studio validator and config helpers
+prototypes/                   # Notes for experiments inside this module's workbench
+production/                   # Sprints, stories, bugs, QA evidence, validation reports
 ```
 
-`src/index.ts` is declared in `package.json` under
-`maru.development.sources.module` and `src/dsp/processor.ts` under
-`maru.development.sources.dsp`. The declaration names the DSP a second time
-in `implementation: { kind: "processor", source: … }` — that is the field the
-toolchain actually resolves.
+## How It Works
 
-The DSP is **restricted TypeScript**: one target-neutral source that compiles
-to JavaScript by default and to WebAssembly and native code from the same file.
-`process` allocates nothing, takes no lock, performs no I/O and calls back
-into no host; every array it touches is allocated in `createState`.
-`AGENTS.md` has the rules in full.
+### Agent Coordination
 
-The editable face in `src/ui/` comes from the same canonical starter as
-its sound and parameter schema. It uses public UI-kit controls, host-owned
-power and descriptor-bound parameter gestures. Its styles ship beside the face.
-The factory bank in `src/factory-bank.ts` is shared by the declaration and face.
-Initial derives from schema defaults; the other presets provide contrasting sounds.
+1. **Vertical delegation:** directors delegate to leads, leads delegate to specialists.
+2. **Horizontal consultation:** same-tier agents can consult each other but cannot make binding cross-domain decisions.
+3. **Conflict resolution:** disagreements escalate to the shared parent (`creative-director` for product and sound, `technical-director` for technical).
+4. **Change propagation:** cross-department changes are coordinated by `producer`.
+5. **Domain boundaries:** agents do not modify files outside their domain without explicit delegation.
 
-To add a parameter, add it to `src/contract.ts` and handle its path in
-`setParameter`, then bind the face control. Typecheck and verify the audible
-parameter effect; typechecking alone cannot prove that DSP dispatch handles a path. A Processor is the default shape for product DSP;
-`AGENTS.md` has the rules.
+### Collaborative, Not Autonomous
 
-## First session
+This is **not** an auto-pilot. Every agent follows the same protocol:
 
-1. Run the workbench, then choose an audio source in the host and press Play.
-2. Try Initial and the two contrasting factory presets, then change a control.
-3. Edit a label in `src/ui/index.tsx` to see face hot reload. Change sound in
-   `src/dsp/processor.ts` and inspect the served and active Program status.
+1. **Ask:** agents ask questions before proposing solutions.
+2. **Present options:** two to four options with trade-offs.
+3. **You decide:** you always make the call.
+4. **Draft:** agents show work before finalizing.
+5. **Approve:** nothing gets written without your sign-off.
 
-[CONTRIBUTING.md](CONTRIBUTING.md) covers UI and DSP edits, debugging, validation,
-prerequisites and troubleshooting. [AGENTS.md](AGENTS.md) is the coding-agent entry.
+`modes.automation` trades some of these prompts for speed. See [docs/COLLABORATIVE-DESIGN-PRINCIPLE.md](docs/COLLABORATIVE-DESIGN-PRINCIPLE.md).
 
-## Shipping
+### Automated Safety
 
-```sh
-npm run module:check       # the packager's own gates, fast lane
-npm run module:pack        # content-addressed web package (local)
-npx maru publish           # publish to your profile; prints @handle/slug@version
-npm run module:export      # native shell plan + metadata
-npm run build:standalone   # native executable
-npm run build:vst3         # VST3 + validator evidence
-npm run build:clap         # CLAP
-npm run build:au           # AU (macOS)
-npm run build              # all configured native formats, with per-target results
-npm run verify:formats     # freshness gate over the built formats
-```
+| Hook | Trigger | What it does |
+| --- | --- | --- |
+| `validate-write.mjs` | Before Write/Edit | **Blocks** a face from using audio or device APIs, and a Processor from I/O |
+| `validate-commit.mjs` | Before `git commit` | **Blocks** a commit that changes the module if the fast check fails |
+| `validate-push.mjs` | Before `git push` | **Blocks** force pushes and pushes to the template repository |
+| `validate-read.mjs` | Before Read | Refuses a whole-file read of a design document over 40 KB and lists its headings |
+| `validate-assets.mjs` | After Write/Edit | Notes an audio or image file with no rights entry |
+| `validate-skill-change.mjs` | After Write/Edit | Suggests `/skill-test` after a skill or agent changes |
+| `session-start.mjs` | Session open | Branch, stage, rigor, `maruaudio` version |
+| `detect-gaps.mjs` | Session open | Missing install, brief or validation |
+| `update-check.mjs` | Session open | One line when a newer `maruaudio` exists |
+| `pre-compact.mjs` | Before compaction | Keeps the current state in view |
+| `session-stop.mjs` | End of a response | Records git activity |
+| `log-agent.mjs`, `log-agent-stop.mjs` | Agent starts and stops | Audit trail |
+| `notify.mjs` | Needs your attention | macOS notification |
 
-Each native build retains its report under `.maru/reports/` and links final
-bundles, archives and qualification from `build/README.md`. Read its
-`validation.status`: `passed` means a real validator or native harness ran;
-`unavailable` means the optional tool is not installed. A binary on disk is
-not by itself evidence.
+**Permission rules** in `settings.json` allow read-only Maru commands, and ask before `maru publish`, `unpublish`, `login`, `audio`, `marketplace`, `remix` and license changes. **`MARU_SILENT=1`** is set for every agent, so nothing reaches your speakers until you click **Unmute**.
 
-## Project folders
+### Path-Scoped Rules
 
-Edit `src/` and the resources you supply in `assets/`. Tests and their
-development inputs belong in `tests/` and `fixtures/`. Find generated,
-usable outputs through `build/README.md`; there is no separate root web dist.
-The reusable browser package is `build/web/module/`.
+| Path | Enforces |
+| --- | --- |
+| `src/dsp/**` | No allocation in `process`, composing the DSP library, resettable state, finite output |
+| `src/ui/**` | UI kit first, face contract only, no audio or devices, concise labels |
+| `src/contract.ts` | Names, ranges, tapers, parameter order as host ABI |
+| `src/factory-bank.ts` | One use per preset, level-matched, auditioned |
+| `src/qualification.ts` | Valid tapes, automation coverage, state round trip |
+| `tests/**` | Behaviour-named tests with real assertions |
+| `design/**` | Required sections, units, testable acceptance |
+| `assets/**` | Rights for every file, generation settings recorded |
+| `demos/**` | Rendered through the module, level-matched, listened to |
+| `prototypes/**` | Inside the module's workbench, question stated, temporary behaviour labelled |
+| `production/**` | Evidence kept beside its story, **not run** stated plainly |
 
-Maru keeps disposable compiler/workbench files in `.maru/cache/` and retained
-diagnostics in `.maru/reports/`. Generated takes live in `.maru/generated/`;
-they are personal work, not disposable cache. Shared tooling settings belong in
-the optional tracked `.maru/config.json`. Product identity and parameters
-remain in the module declaration.
+## Design Philosophy
 
-The defaults need no settings file: output root `build`, without product or
-version nesting. Set `build.output.directory`, `productDirectory` and
-`versionDirectory` to choose another layout, and `build.nativeFormats` to
-select the formats built by `npm run build`. Add a custom output directory
-to Git ignore. Read the [packaging guide](https://maru.audio/docs/packaging-and-releasing-plugins)
-for native builds, CI, installers and distribution.
+- **One module.** The framework owns MIDI, ports, parameter state and compilation. A face never generates audio.
+- **Sound and evidence stay separate.** Measurements are not listening, and listening is not an agent's job.
+- **First slice by risk.** Build what could kill the idea first, not whatever is conventional.
+- **Few controls.** Five that feel immediate beat twenty that need a manual.
+- **Face first, DSP last.** Parameters, then the face, then the sound, so nothing needs rewiring.
+- **Honest about targets.** Claim only what was built and checked.
 
-`AGENTS.md` is the authoring contract, written for coding agents but accurate
-for humans too. `CLAUDE.md` points at it.
+## Customization
 
-[Maru website](https://maru.audio) · [Documentation](https://maru.audio/docs)
+This is a **template**, not a locked framework. Delete agents you do not need, edit their prompts, tune the hooks, add rules for your folders, or change process weight with `modes.rigor`. After changes, `/skill-test` checks that every command your skills name still exists.
+
+To start from something other than an effect, replace `src/` using `npx maru init <dir> --from blank-instrument`, or see [docs/how-to/](docs/how-to/).
+
+## Credits
+
+The structure, hierarchy and much of the wording of this studio are adapted from [Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios) by Donchitos, under the MIT License. This project is not affiliated with or endorsed by that project. See [NOTICE.md](NOTICE.md).
+
+## License
+
+Studio files are under the [MIT License](LICENSE), including the upstream copyright notice. **That is separate from your plugin's licence:** `maru.config.json` sets your module's published listing licence, which defaults to `maru-remix-1.0`, and you can change it. The `maruaudio` package and other dependencies keep their own licences.

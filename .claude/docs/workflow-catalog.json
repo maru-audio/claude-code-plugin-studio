@@ -1,0 +1,125 @@
+{
+  "stages": [
+    {
+      "id": "Concept",
+      "goal": "One-page brief",
+      "skills": [
+        "start",
+        "brainstorm"
+      ],
+      "requires": [
+        "design/brief.md"
+      ]
+    },
+    {
+      "id": "Sound & Control Design",
+      "goal": "What it sounds like and what you touch",
+      "skills": [
+        "map-signal-flow",
+        "sound-bible",
+        "face-bible",
+        "design-module",
+        "design-review",
+        "review-all-designs"
+      ],
+      "requires": [
+        "design/signal-flow.md",
+        "design/sound-bible.md"
+      ]
+    },
+    {
+      "id": "Technical Setup",
+      "goal": "A plan that fits this machine",
+      "skills": [
+        "setup-target",
+        "create-architecture",
+        "architecture-decision",
+        "architecture-review",
+        "create-control-manifest",
+        "test-setup"
+      ],
+      "requires": [
+        "docs/architecture/plan.md"
+      ]
+    },
+    {
+      "id": "Pre-Production",
+      "goal": "Prove the riskiest thing",
+      "skills": [
+        "prototype",
+        "face-from-reference",
+        "parameter-pass",
+        "vertical-slice",
+        "create-epics",
+        "create-stories"
+      ],
+      "requires": [
+        "production/stories"
+      ]
+    },
+    {
+      "id": "Production",
+      "goal": "Build in slices you can hear",
+      "skills": [
+        "sprint-plan",
+        "story-readiness",
+        "dev-story",
+        "story-done",
+        "code-review",
+        "sprint-status",
+        "team-effect",
+        "team-instrument",
+        "team-face",
+        "team-sound"
+      ],
+      "requires": []
+    },
+    {
+      "id": "Polish",
+      "goal": "It holds up",
+      "skills": [
+        "gain-staging",
+        "preset-pass",
+        "demo-pass",
+        "perf-profile",
+        "listening-test",
+        "soak-test",
+        "state-recall",
+        "midi-test",
+        "ux-review",
+        "team-polish",
+        "team-qa",
+        "host-matrix"
+      ],
+      "requires": [
+        "production/qa/listening"
+      ]
+    },
+    {
+      "id": "Release",
+      "goal": "A link someone can play",
+      "skills": [
+        "release-checklist",
+        "security-audit",
+        "build-plugin",
+        "publish",
+        "launch-checklist",
+        "changelog",
+        "patch-notes",
+        "team-release",
+        "team-launch",
+        "hotfix",
+        "day-one-patch"
+      ],
+      "requires": []
+    }
+  ],
+  "minimal_route": [
+    "start",
+    "brainstorm",
+    "create-stories",
+    "dev-story",
+    "story-done",
+    "publish"
+  ]
+}
