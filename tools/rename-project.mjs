@@ -21,9 +21,11 @@ edit("src/index.ts", (t) => t
   .replace(/^\s*\/\/ Set your own reverse-DNS module id.*\n/m, "")
   .replace(/id: "[^"]+"/, `id: "${id}"`)
   .replace(/^(\s*)name: "[^"]+"/m, `$1name: "${name}"`))
+edit("src/ui/index.tsx", (t) => t.replace(/brand=\{"[^"]+"\}/, `brand={${JSON.stringify(name)}}`))
 edit("package.json", (t) => {
   const p = JSON.parse(t)
   p.name = slug
+  if (p.description) p.description = p.description.replace(/^.*? \u2014 /, `${name} \u2014 `)
   if (p.maru?.moduleId) p.maru.moduleId = id
   return JSON.stringify(p, null, 2) + "\n"
 })
