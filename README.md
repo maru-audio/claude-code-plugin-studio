@@ -9,7 +9,7 @@
 
 ---
 
-> **Status: internal trial, not released.** This template exists to walk the whole path a new user would take and find what is missing. [What works today](#what-works-today) is measured, not promised. Run `npm run studio:validate` to see what works on your machine.
+> **Status: early trial, not a finished release.** This template exists to walk the whole path a new user would take and find what is missing. [What works today](#what-works-today) is measured, not promised. Run `npm run studio:validate` to see what works on your machine.
 
 ## Why This Exists
 
@@ -177,7 +177,7 @@ Unlike the upstream project, this needs no Python or Bash: hooks and tools run o
 1. **Create your project.** The first route gives it its own name and id straight away:
 
    ```bash
-   npx maruaudio init my-plugin --from <this-repository-url> --ref <tag>
+   npx maruaudio init my-plugin --from https://github.com/maru-audio/maru-plugin-studio --ref main
    cd my-plugin
    npm install
    ```

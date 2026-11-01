@@ -230,7 +230,7 @@ A person cannot run format validators or see host compatibility without native t
 
 **Ship Maru Plugin Studio: generated from one source, with each copy getting its own identity**
 
-The studio is an internal trial, with several things in the way of release. A copy keeps the template's module id and name, so its first publish would be called Maru Plugin Studio. Its files sit outside the module project contract, so they are dropped from the source archive and lost on a Studio round trip. It is a hand-assembled copy of a generated starter, so it will drift. A GitHub template has no update link.
+The studio is an early trial, with several things in the way of release. A copy keeps the template's module id and name, so its first publish would be called Maru Plugin Studio. Its files sit outside the module project contract, so they are dropped from the source archive and lost on a Studio round trip. It is a hand-assembled copy of a generated starter, so it will drift. A GitHub template has no update link.
 
 - `maru publish --dry-run` planned `local.maru-plugin-studio@0.0.1` as the published identity until `tools/rename-project.mjs` was added to the studio. That is a local script, and the platform has no rename step.
 - The dry run also credits `@maru/blank-effect` as origin, which is right, and should stay.
