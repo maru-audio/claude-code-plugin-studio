@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center">Maru Plugin Studio</h1>
+  <h1 align="center">Maru Agentic Template</h1>
   <p align="center">
     Turn a single Claude Code session into a full audio plugin studio.
     <br />
@@ -15,7 +15,7 @@
 
 Making a plugin with AI is powerful, but a single chat session has no structure. Nobody stops you from shipping a preset that clips, skipping the listening test, or adding a twelfth knob. There is no QA pass, no sound review, no one asking "does this still do the one thing it promised?"
 
-**Maru Plugin Studio** gives your AI session the structure of a real plugin company. Instead of one general-purpose assistant, you get 42 specialized agents organized into a studio hierarchy: directors who guard the vision, department leads who own their domains, and specialists who do the hands-on work. Each agent has defined responsibilities, escalation paths and quality gates.
+**Maru Agentic Template** gives your AI session the structure of a real plugin company. Instead of one general-purpose assistant, you get 42 specialized agents organized into a studio hierarchy: directors who guard the vision, department leads who own their domains, and specialists who do the hands-on work. Each agent has defined responsibilities, escalation paths and quality gates.
 
 The result: you still make every decision, and you are still the only one who can say how it sounds. But now you have a team that asks the right questions, catches mistakes early, and keeps your project organized from first idea to published release.
 
@@ -179,7 +179,7 @@ Unlike the upstream project, this needs no Python or Bash: hooks and tools run o
    With a `maruaudio` release newer than 0.0.7, one command does both. On 0.0.7 it stops with a download-limit error ([DEVX-076](docs/KNOWN-GAPS.md#devx-076)):
 
    ```bash
-   npx maruaudio@latest init my-plugin --from https://github.com/maru-audio/maru-plugin-studio --ref main
+   npx maruaudio@latest init my-plugin --from https://github.com/maru-audio/maru-agentic-template --ref main
    ```
 
    **To publish on 0.0.7, install with pnpm.** `maru publish` refuses projects installed with npm on that version. The release after it fixes this.

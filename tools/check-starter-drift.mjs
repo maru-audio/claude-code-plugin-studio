@@ -22,7 +22,7 @@ const files = (dir, out = []) => {
 const work = mkdtempSync(join(tmpdir(), "maru-starter-drift-"))
 try {
   // The folder name sets the module id, so match this template's.
-  const fresh = join(work, "maru-plugin-studio")
+  const fresh = join(work, "maru-agentic-template")
   const made = spawnSync(join(root, "node_modules/.bin/maru"), ["init", fresh, "--from", "blank-effect", "--name", merged().project.name], { encoding: "utf8" })
   if (made.status !== 0) {
     console.error(`maru init failed:\n${made.stdout}${made.stderr}`)

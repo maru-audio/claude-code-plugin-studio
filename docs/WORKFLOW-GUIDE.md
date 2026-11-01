@@ -1,4 +1,4 @@
-# Maru Plugin Studio: workflow guide
+# Maru Agentic Template: workflow guide
 
 How to go from an idea to a published plugin using the 42 agents and 104 commands.
 

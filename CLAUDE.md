@@ -1,4 +1,4 @@
-# Maru Plugin Studio: audio plugin studio agent architecture
+# Maru Agentic Template: audio plugin studio agent architecture
 
 Audio plugin development managed through 42 coordinated Claude Code subagents,
 on one real Maru module. Each agent owns a specific domain.

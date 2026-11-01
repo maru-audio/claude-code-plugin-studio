@@ -5,7 +5,7 @@ import { homedir } from "node:os"
 import { join } from "node:path"
 import { config, projectDir } from "./_lib.mjs"
 if (process.env.CI || config().features?.update_check === false) process.exit(0)
-const dir = join(homedir(), ".cache/maru-plugin-studio"), cache = join(dir, "latest.txt")
+const dir = join(homedir(), ".cache/maru-agentic-template"), cache = join(dir, "latest.txt")
 mkdirSync(dir, { recursive: true })
 let age = Infinity
 try { age = Date.now() - statSync(cache).mtimeMs } catch {}

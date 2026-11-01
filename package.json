@@ -1,9 +1,9 @@
 {
-  "name": "maru-plugin-studio",
+  "name": "maru-agentic-template",
   "version": "0.0.1",
   "private": true,
   "type": "module",
-  "description": "Maru Plugin Studio \u2014 a Processor effect audio module",
+  "description": "Maru Agentic Template \u2014 a Processor effect audio module",
   "scripts": {
     "dev": "maru dev .",
     "typecheck": "tsc -p tsconfig.json",

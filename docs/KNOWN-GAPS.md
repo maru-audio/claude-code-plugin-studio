@@ -21,7 +21,7 @@ Found something else? Run `/studio-gap`.
 | [DEVX-073](#devx-073) | No tool to compare against a reference, or to record that a person listened | `/listening-test` keeps a report under `production/qa/listening/`. |
 | [DEVX-074](#devx-074) | No checks or guidance for face accessibility and translation | Manual review by `accessibility-specialist`, and a hand-built string table. |
 | [DEVX-075](#devx-075) | No public host validation matrix, and hardware commands may assume a checkout | A person tests in a DAW and records it with `/host-matrix`. |
-| [DEVX-076](#devx-076) | Ship Maru Plugin Studio: generated from one source, with each copy getting its own identity | Change `name` in `package.json` and `maru.config.json` by hand before publishing. |
+| [DEVX-076](#devx-076) | Ship Maru Agentic Template: generated from one source, with each copy getting its own identity | Change `name` in `package.json` and `maru.config.json` by hand before publishing. |
 | [DEVX-077](#devx-077) | Measure the studio: does it produce plugins or documents? | See the README. |
 | [DEVX-078](#devx-078) | Public guides leave out what authors hit first, so an agent reads package source | This studio's path rules carry these facts. |
 
@@ -64,7 +64,7 @@ Maru's designed route for everyone is hosted: publish, then Maru builds, validat
 
 - `maru plugin build` needs a private toolkit by design, per the [native toolchain distribution plan](../../docs/strategy/native-toolchain-distribution-plan-2026-10-24.md).
 - `maru module status` points to the Distribution tab for native builds. `maru build list` showed existing projects as `unsupported (native-artifact-missing)`.
-- Workflow: `maru-plugin-studio/docs/how-to/build-native-plugins.md`.
+- Workflow: `maru-agentic-template/docs/how-to/build-native-plugins.md`.
 
 **Workaround:** Browser-playable modules work today. Local native builds need approved access to the toolkit.
 
@@ -228,11 +228,11 @@ A person cannot run format validators or see host compatibility without native t
 
 ## DEVX-076
 
-**Ship Maru Plugin Studio: generated from one source, with each copy getting its own identity**
+**Ship Maru Agentic Template: generated from one source, with each copy getting its own identity**
 
-The studio is an early trial, with several things in the way of release. A copy keeps the template's module id and name, so its first publish would be called Maru Plugin Studio. Its files sit outside the module project contract, so they are dropped from the source archive and lost on a Studio round trip. It is a hand-assembled copy of a generated starter, so it will drift. A GitHub template has no update link.
+The studio is an early trial, with several things in the way of release. A copy keeps the template's module id and name, so its first publish would be called Maru Agentic Template. Its files sit outside the module project contract, so they are dropped from the source archive and lost on a Studio round trip. It is a hand-assembled copy of a generated starter, so it will drift. A GitHub template has no update link.
 
-- `maru publish --dry-run` planned `local.maru-plugin-studio@0.0.1` as the published identity until `tools/rename-project.mjs` was added to the studio. That is a local script, and the platform has no rename step.
+- `maru publish --dry-run` planned `local.maru-agentic-template@0.0.1` as the published identity until `tools/rename-project.mjs` was added to the studio. That is a local script, and the platform has no rename step.
 - The dry run also credits `@maru/blank-effect` as origin, which is right, and should stay.
 - On `maruaudio@0.0.7`, `maru init --from` stops with "GitHub template response exceeds the download limit" on any template with a very small file, because gzip makes those responses longer than the file. Fixed in source, and it created a working project from this repository on a local candidate. Until that release, use **Use this template**.
 - On `maruaudio@0.0.7`, `maru publish` refuses a project installed with npm: "maruaudio@0.0.7: 43379940 unpacked bytes is over the 25 MB budget". A plain starter does the same, and pnpm is not affected. It passes on a local candidate of the next release.

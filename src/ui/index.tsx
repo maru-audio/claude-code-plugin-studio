@@ -109,7 +109,7 @@ export function SdkProcessorEffectFace(face: AudioModuleFaceProps) {
       <FaceModuleNavbar
         face={face}
         fallbackPresets={factoryPresets}
-        brand={"Maru Plugin Studio"}
+        brand={"Maru Agentic Template"}
         subtitle="Drive → Tone"
         className="slate-workcard__navbar"
         unstyled

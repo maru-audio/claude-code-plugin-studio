@@ -1,4 +1,4 @@
-# Developing Maru Plugin Studio
+# Developing Maru Agentic Template
 
 Built on the [Maru framework](https://maru.audio); see the
 [documentation](https://maru.audio/docs) and this project's [README](README.md).
