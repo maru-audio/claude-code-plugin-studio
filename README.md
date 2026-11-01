@@ -174,15 +174,15 @@ Unlike the upstream project, this needs no Python or Bash: hooks and tools run o
 
 ### Setup
 
-1. **Create your project.** The first route gives it its own name and id straight away:
+1. **Create your project.** Click **Use this template** on GitHub, clone your copy and run `npm install`. `/start` then gives it its own identity.
+
+   With a `maruaudio` release newer than 0.0.7, one command does both. On 0.0.7 it stops with a download-limit error ([DEVX-076](docs/KNOWN-GAPS.md#devx-076)):
 
    ```bash
-   npx maruaudio init my-plugin --from https://github.com/maru-audio/maru-plugin-studio --ref main
-   cd my-plugin
-   npm install
+   npx maruaudio@latest init my-plugin --from https://github.com/maru-audio/maru-plugin-studio --ref main
    ```
 
-   Or click **Use this template** on GitHub and clone your copy. `/start` then gives it its own identity.
+   **To publish on 0.0.7, install with pnpm.** `maru publish` refuses projects installed with npm on that version. The release after it fixes this.
 
 2. **See what this machine can do:**
 

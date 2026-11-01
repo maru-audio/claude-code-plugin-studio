@@ -234,8 +234,8 @@ The studio is an early trial, with several things in the way of release. A copy 
 
 - `maru publish --dry-run` planned `local.maru-plugin-studio@0.0.1` as the published identity until `tools/rename-project.mjs` was added to the studio. That is a local script, and the platform has no rename step.
 - The dry run also credits `@maru/blank-effect` as origin, which is right, and should stay.
-- `npm install` has not been tested here, because a workspace guard blocks it; installs used pnpm.
-- `maru init --from <GitHub URL> --ref <ref>` has not been tried on this repository.
+- On `maruaudio@0.0.7`, `maru init --from` stops with "GitHub template response exceeds the download limit" on any template with a very small file, because gzip makes those responses longer than the file. Fixed in source, and it created a working project from this repository on a local candidate. Until that release, use **Use this template**.
+- On `maruaudio@0.0.7`, `maru publish` refuses a project installed with npm: "maruaudio@0.0.7: 43379940 unpacked bytes is over the 25 MB budget". A plain starter does the same, and pnpm is not affected. It passes on a local candidate of the next release.
 - The instrument starter requires moving files by hand; there is no command.
 
 **Workaround:** Change `name` in `package.json` and `maru.config.json` by hand before publishing.
