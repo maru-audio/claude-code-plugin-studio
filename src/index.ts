@@ -5,9 +5,9 @@ import { PROCESSOR_EFFECT_SCHEMA } from "./contract"
 import { factoryPresets } from "./factory-bank"
 
 export const AUDIO_MODULE = defineEffect({
-  // Set your own reverse-DNS module id (for example com.<you>.maru-agentic-template) before your first publish: it becomes the module's permanent identity. "local." is a provisional default.
-  id: "local.maru-agentic-template",
-  name: "Maru Agentic Template",
+  // Set your own reverse-DNS module id (for example com.<you>.claude-code-plugin-studio) before your first publish: it becomes the module's permanent identity. "local." is a provisional default.
+  id: "local.claude-code-plugin-studio",
+  name: "Claude Code Plugin Studio",
   version: maruProjectConfig.version,
   // Mono unless set: add `channels: 2` for a stereo effect, and give the
   // qualification input tape a second channel.

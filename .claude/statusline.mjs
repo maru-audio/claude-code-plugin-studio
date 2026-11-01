@@ -3,4 +3,4 @@ import { join } from "node:path"
 const dir = process.env.CLAUDE_PROJECT_DIR ?? process.cwd()
 let c = {}
 try { c = JSON.parse(readFileSync(join(dir, "studio.config.json"), "utf8")) } catch {}
-console.log(`Maru Agentic Template · ${c.project?.stage ?? "Concept"} · ${c.modes?.rigor ?? "minimal"}`)
+console.log(`Claude Code Plugin Studio · ${c.project?.stage ?? "Concept"} · ${c.modes?.rigor ?? "minimal"}`)

@@ -109,7 +109,7 @@ require another approval within the work the user already authorized.
 Tell the user which files you created or changed, the checks you ran and their
 results, how to play the module, and anything left to do or unverified.
 
-## This project: Maru Agentic Template
+## This project: Claude Code Plugin Studio
 
 This project is built on the [Maru framework](https://maru.audio).
 Read [README.md](README.md) for its working starter, [CONTRIBUTING.md](CONTRIBUTING.md)

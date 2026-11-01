@@ -1,9 +1,9 @@
 <p align="center">
-  <h1 align="center">Maru Agentic Template</h1>
+  <h1 align="center">Claude Code Plugin Studio</h1>
   <p align="center">
     Turn a single Claude Code session into a full audio plugin studio.
     <br />
-    42 agents. 104 skills. One coordinated AI team, on a real Maru module.
+    42 subagents. 104 skills. One coordinated team built on Claude Code's own features, on a real Maru module.
   </p>
 </p>
 
@@ -13,16 +13,33 @@
 
 ## Why This Exists
 
-Making a plugin with AI is powerful, but a single chat session has no structure. Nobody stops you from shipping a preset that clips, skipping the listening test, or adding a twelfth knob. There is no QA pass, no sound review, no one asking "does this still do the one thing it promised?"
+Making a plugin with Claude Code is powerful, but a single session has no structure. Nobody stops you from shipping a preset that clips, skipping the listening test, or adding a twelfth knob. There is no QA pass, no sound review, no one asking "does this still do the one thing it promised?"
 
-**Maru Agentic Template** gives your AI session the structure of a real plugin company. Instead of one general-purpose assistant, you get 42 specialized agents organized into a studio hierarchy: directors who guard the vision, department leads who own their domains, and specialists who do the hands-on work. Each agent has defined responsibilities, escalation paths and quality gates.
+**Claude Code Plugin Studio** gives your Claude Code session the structure of a real plugin company. Instead of one general-purpose assistant, you get 42 specialized subagents organized into a studio hierarchy: directors who guard the vision, department leads who own their domains, and specialists who do the hands-on work. Each agent has defined responsibilities, escalation paths and quality gates.
 
 The result: you still make every decision, and you are still the only one who can say how it sounds. But now you have a team that asks the right questions, catches mistakes early, and keeps your project organized from first idea to published release.
 
-It is deliberately more opinionated than the [Maru agent skill](https://github.com/maru-audio/maru-skill). The skill tells an agent what Maru can do. This tells it how we think a plugin should get made.
+It is the audio plugin sibling of [Claude Code Game Studios](https://github.com/Donchitos/Claude-Code-Game-Studios), which it is adapted from. Plugins are built on [Maru](https://maru.audio).
+
+## Built for Claude Code
+
+This template is deliberately specific to one agent. It uses what Claude Code offers instead of aiming at what every agent has in common:
+
+| Claude Code feature | What the studio does with it |
+|---|---|
+| [Subagents](https://code.claude.com/docs/en/sub-agents) | 42 agents in `.claude/agents/`: directors, department leads and specialists, each with its own responsibilities and escalation path |
+| [Skills](https://code.claude.com/docs/en/skills) | 104 slash commands in `.claude/skills/`, from `/start` through release |
+| [Hooks](https://code.claude.com/docs/en/hooks) | Scripts in `.claude/hooks/` on eight session events, which load context, check pushes and record agent activity |
+| Path-scoped rules | 13 rules in `.claude/rules/`, applied according to the files being edited |
+| Status line and settings | The project stage in `.claude/statusline.mjs`, and permissions in `.claude/settings.json` |
+
+**Using another agent?** The agents, skills and hooks are Claude Code features, and will not run elsewhere. Use the [Maru agent skill](https://github.com/maru-audio/maru-skill), which works with any agent. The skill tells an agent what Maru can do. This studio tells Claude Code how we think a plugin should get made.
+
+This is an independent project from Maru. It is not made or endorsed by Anthropic. Claude and Claude Code are Anthropic's products.
 
 ## Table of Contents
 
+- [Built for Claude Code](#built-for-claude-code)
 - [What's Included](#whats-included)
 - [Studio Hierarchy](#studio-hierarchy)
 - [Slash Commands](#slash-commands)
@@ -179,7 +196,7 @@ Unlike the upstream project, this needs no Python or Bash: hooks and tools run o
    With a `maruaudio` release newer than 0.0.7, one command does both. On 0.0.7 it stops with a download-limit error ([DEVX-076](docs/KNOWN-GAPS.md#devx-076)):
 
    ```bash
-   npx maruaudio@latest init my-plugin --from https://github.com/maru-audio/maru-agentic-template --ref main
+   npx maruaudio@latest init my-plugin --from https://github.com/maru-audio/claude-code-plugin-studio --ref main
    ```
 
    **To publish on 0.0.7, install with pnpm.** `maru publish` refuses projects installed with npm on that version. The release after it fixes this.
